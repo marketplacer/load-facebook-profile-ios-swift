@@ -12,7 +12,6 @@ class ViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
   }
 
   override func didReceiveMemoryWarning() {
@@ -22,6 +21,22 @@ class ViewController: UIViewController {
 
 
   @IBAction func onLoginWithFacebookButtonTapped(sender: AnyObject) {
+
+    if (FBSession.activeSession().state == FBSessionState.Open
+      || FBSession.activeSession().state == FBSessionState.OpenTokenExtended) {
+
+      FBSession.activeSession().closeAndClearTokenInformation()
+      println("closeAndClearTokenInformation")
+    } else {
+      FBSession.openActiveSessionWithReadPermissions(["public_profile"],
+        allowLoginUI: true) { session, state, error in
+
+        println("openActiveSessionWithReadPermissions callback")
+
+        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        appDelegate.sessionStateChanged(session, state: state, error: error)
+      }
+    }
   }
 }
 
