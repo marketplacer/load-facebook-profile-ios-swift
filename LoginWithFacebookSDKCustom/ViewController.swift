@@ -21,5 +21,7 @@ class ViewController: UIViewController {
   }
 
 
+  @IBAction func onLoginWithFacebookButtonTapped(sender: AnyObject) {
+  }
 }
 
