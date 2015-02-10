@@ -59,6 +59,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
 
+    println("Application handle open URL")
+
     let urlHandled = FBAppCall.handleOpenURL(url, sourceApplication: sourceApplication)
     return urlHandled
   }
