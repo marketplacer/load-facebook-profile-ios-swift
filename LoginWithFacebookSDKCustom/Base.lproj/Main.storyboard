@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -30,13 +31,26 @@
                                     <action selector="onLoginWithFacebookButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eWP-HG-OF6"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XSP-ww-eo2">
+                                <rect key="frame" x="16" y="113" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="XSP-ww-eo2" secondAttribute="trailing" id="5Za-92-Zfg"/>
                             <constraint firstItem="ZHS-zm-65v" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="8az-C7-ONg"/>
+                            <constraint firstItem="XSP-ww-eo2" firstAttribute="top" secondItem="ZHS-zm-65v" secondAttribute="bottom" constant="16" id="DRc-wZ-kUI"/>
+                            <constraint firstItem="XSP-ww-eo2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="IeV-N2-Z6z"/>
                             <constraint firstAttribute="centerX" secondItem="ZHS-zm-65v" secondAttribute="centerX" id="dqa-tB-5dM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginLogoutButton" destination="ZHS-zm-65v" id="NCl-6n-VM4"/>
+                        <outlet property="userInfoLabel" destination="XSP-ww-eo2" id="haj-fg-J13"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
