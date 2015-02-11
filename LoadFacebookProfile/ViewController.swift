@@ -17,19 +17,25 @@ class ViewController: UIViewController {
   @IBAction func onLoginWithFacebookButtonTapped(sender: AnyObject) {
     userInfoLabel.text = ""
     
-    TegFacebookUserLoader.load(askEmail: false) { user in
+    TegFacebookUserLoader.load(askEmail: true) { user in
       self.onUserLoaded(user)
     }
   }
   
   private func onUserLoaded(user: TegFacebookUser) {
-    var userName = ""
-      
+    var fields = ["User id: \(user.id)"]
+
     if let currentName = user.name {
-      userName = "User: \(currentName)\n"
+      fields.append("Name: \(currentName)")
     }
     
-    userInfoLabel.text = "\(userName)User ID: \(user.id) \n\nAccess token: \(user.accessToken)"
+    if let currentEmail = user.email {
+      fields.append("Email: \(currentEmail)")
+    }
+    
+    fields.append("Access token: \(user.accessToken)")
+    
+    userInfoLabel.text = join("\n\n", fields)
   }
 }
 
