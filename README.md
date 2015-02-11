@@ -19,9 +19,10 @@ The helper function can be useful for those who just need to load a Facebook use
 1. Add Facebook SDK to your app. Follow instructions on Facebook developer pages:
 
   1. Create a Facebook app on your Facebook developers site.
-  2. Add Facebook SDK framework to your project. Add `#import <FacebookSDK/FacebookSDK.h>` to your bridging header.
-  3. Setup 3 plist keys. 
-  4. Add `FBAppCall.handleOpenURL` to 'application(application: UIApplication, openUrl: ...)' method of your app delegate.
+  1. Add Facebook SDK framework to your project.
+  1. Add `#import <FacebookSDK/FacebookSDK.h>` to your bridging header.
+  1. Setup 3 plist keys as descrived in Facebook docs: `FacebookAppID`, `FacebookDisplayName` and `URL types`.
+  1. Add `FBAppCall.handleOpenURL` to 'application(application: UIApplication, openUrl: ...)' method of your app delegate.
 
 2. Copy [TegFacebookUser.swift](https://raw.githubusercontent.com/exchangegroup/load-facebook-profile-ios-swift/master/LoadFacebookProfile/TegFacebookUser.swift) and [TegFacebookUserLoader.swift](https://raw.githubusercontent.com/exchangegroup/load-facebook-profile-ios-swift/master/LoadFacebookProfile/TegFacebookUserLoader.swift) into your project.
 
