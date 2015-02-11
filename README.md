@@ -19,7 +19,7 @@ Facebook user ID and access token can be used to authenticate Facebook user in y
 
 ## Usage
 
-```
+```swift
 TegFacebookUserLoader.load(askEmail: false) { user in
   // user profile is loaded
 }
