@@ -17,7 +17,7 @@ Facebook user ID and access token can be used to authenticate Facebook user in y
 
 1. Add Facebook SDK to your app. Follow instructions on Facebook developer pages:
 
-  1. Create a Facebook app.
+  1. Create a Facebook app on your Facebook developers site.
   2. Add Facebook SDK framework to your project.
   3. Setup 3 plist keys. 
   4. Add `FBAppCall.handleOpenURL` to application(application, openUrl...) of your app delegate.
