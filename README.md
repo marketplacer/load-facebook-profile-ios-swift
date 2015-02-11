@@ -10,6 +10,7 @@ This is a demo app and a helper function for loading Facebook user profile:
 * Name
 
 Facebook user ID and access token can be used to authenticate Facebook user in your app.
+The helper function is suitable for those who just need to load a Facebook user profile from code without using other SDK features. 
 
 <img src="https://github.com/exchangegroup/load-facebook-profile-ios-swift/raw/master/graphics/load_facebook_profile_ios_swift.png" alt="Load Facebook user profile on iOS swift with Facebook SDK" width="320">
 
