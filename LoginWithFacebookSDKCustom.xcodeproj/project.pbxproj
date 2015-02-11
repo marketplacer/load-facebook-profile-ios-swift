@@ -15,6 +15,8 @@
 		2BD0E5A61A8AC1240095C31F /* LoginWithFacebookSDKCustomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0E5A51A8AC1240095C31F /* LoginWithFacebookSDKCustomTests.swift */; };
 		2BD0E5B01A8AC2F40095C31F /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BD0E5AF1A8AC2F40095C31F /* FacebookSDK.framework */; };
 		2BD0E5B21A8AC3700095C31F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BD0E5B11A8AC3700095C31F /* Default-568h@2x.png */; };
+		2BD8CAEA1A8AFF730045BF40 /* TegFacebookUserLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD8CAE91A8AFF730045BF40 /* TegFacebookUserLoader.swift */; };
+		2BD8CAEC1A8B02C50045BF40 /* TegFacebookUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD8CAEB1A8B02C50045BF40 /* TegFacebookUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,8 @@
 		2BD0E5AF1A8AC2F40095C31F /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = "../../../../Documents/facebook-ios-sdk/build/FacebookSDK.framework"; sourceTree = "<group>"; };
 		2BD0E5B11A8AC3700095C31F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		2BD0E5B31A8AC57A0095C31F /* LoginWithFacebookSDKCustom-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LoginWithFacebookSDKCustom-Bridging-Header.h"; sourceTree = "<group>"; };
+		2BD8CAE91A8AFF730045BF40 /* TegFacebookUserLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TegFacebookUserLoader.swift; sourceTree = "<group>"; };
+		2BD8CAEB1A8B02C50045BF40 /* TegFacebookUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TegFacebookUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,7 @@
 		2BD0E58C1A8AC1240095C31F /* LoginWithFacebookSDKCustom */ = {
 			isa = PBXGroup;
 			children = (
+				2BD8CAE81A8AFF5C0045BF40 /* Lib */,
 				2BD0E58F1A8AC1240095C31F /* AppDelegate.swift */,
 				2BD0E5911A8AC1240095C31F /* ViewController.swift */,
 				2BD0E5931A8AC1240095C31F /* Main.storyboard */,
@@ -119,6 +124,15 @@
 				2BD0E5A41A8AC1240095C31F /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2BD8CAE81A8AFF5C0045BF40 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				2BD8CAE91A8AFF730045BF40 /* TegFacebookUserLoader.swift */,
+				2BD8CAEB1A8B02C50045BF40 /* TegFacebookUser.swift */,
+			);
+			name = Lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +236,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BD8CAEA1A8AFF730045BF40 /* TegFacebookUserLoader.swift in Sources */,
+				2BD8CAEC1A8B02C50045BF40 /* TegFacebookUser.swift in Sources */,
 				2BD0E5921A8AC1240095C31F /* ViewController.swift in Sources */,
 				2BD0E5901A8AC1240095C31F /* AppDelegate.swift in Sources */,
 			);
@@ -430,6 +446,7 @@
 				2BD0E5AB1A8AC1240095C31F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2BD0E5AC1A8AC1240095C31F /* Build configuration list for PBXNativeTarget "LoginWithFacebookSDKCustomTests" */ = {
 			isa = XCConfigurationList;
@@ -438,6 +455,7 @@
 				2BD0E5AE1A8AC1240095C31F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

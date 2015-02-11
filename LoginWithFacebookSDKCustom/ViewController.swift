@@ -20,38 +20,19 @@ class ViewController: UIViewController {
   @IBAction func onLoginWithFacebookButtonTapped(sender: AnyObject) {
     userInfoLabel.text = ""
     
-    FBSession.activeSession().closeAndClearTokenInformation()
-    
-    FBSession.openActiveSessionWithReadPermissions(["public_profile"],
-      allowLoginUI: true) { session, state, error in
-
-      self.sessionStateChanged(session, state: state, error: error)
+    TegFacebookUserLoader.load(askEmail: false) { user in
+      self.onUserLoaded(user)
     }
   }
   
-  private func showUserInfo(session: FBSession) {
-    if let currentAccessToken = session.accessTokenData {
-      let acessToken = currentAccessToken.accessToken
+  private func onUserLoaded(user: TegFacebookUser) {
+    var userName = ""
       
-      FBRequestConnection.startForMeWithCompletionHandler { connection, result, error in
-        if error != nil { return }
-        if let currentResult = result as? NSDictionary {
-          if let userId = result["id"] as? String {
-            self.userInfoLabel.text = "\(rand()) User ID: \(userId) \n\nAccess token: \(acessToken)"
-          }
-        }
-      }
-      
+    if let currentName = user.name {
+      userName = "User: \(currentName)\n"
     }
     
-    // Note: to verify user id send this request from your server
-    // https://graph.facebook.com/me?fields=id&access_token=YOUR_ACCCESS_TOKEN
-  }
-  
-  private func sessionStateChanged(session: FBSession, state: FBSessionState, error: NSError?) {
-    if error != nil { return }
-    
-    showUserInfo(session)
+    userInfoLabel.text = "\(userName)User ID: \(user.id) \n\nAccess token: \(user.accessToken)"
   }
 }
 
