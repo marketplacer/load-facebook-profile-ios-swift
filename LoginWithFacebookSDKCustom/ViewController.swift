@@ -20,6 +20,8 @@ class ViewController: UIViewController {
   @IBAction func onLoginWithFacebookButtonTapped(sender: AnyObject) {
     userInfoLabel.text = ""
     
+    FBSession.activeSession().closeAndClearTokenInformation()
+    
     FBSession.openActiveSessionWithReadPermissions(["public_profile"],
       allowLoginUI: true) { session, state, error in
 
