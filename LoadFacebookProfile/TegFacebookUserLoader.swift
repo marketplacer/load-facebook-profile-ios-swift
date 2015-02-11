@@ -29,6 +29,7 @@ class TegFacebookUserLoader {
       allowLoginUI: true) { session, state, error in
       
       if error != nil { return }
+      if state == FBSessionState.Closed { return }
       
       self.loadFacebookMeInfo(onSuccess)
     }
