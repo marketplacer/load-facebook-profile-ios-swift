@@ -39,7 +39,7 @@ Please note that user may deny sharing all or some of the profile information. T
 
 ## Verifying user ID on server side
 
-In order to authenticate the user one needs to verify its `facebook user id` on server side. Send the following request from your server and compare the returned user id with the one loaded by `TegFacebookUserLoader.load` function.
+In order to authenticate a user one needs to verify its `facebook user id` on server side. Send the following request from your server and compare the returned user id with the one loaded by `TegFacebookUserLoader.load` function.
 
 ```
 https://graph.facebook.com/me?fields=id&access_token=YOUR_ACCCESS_TOKEN
