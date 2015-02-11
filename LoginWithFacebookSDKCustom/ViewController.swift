@@ -25,6 +25,8 @@ class ViewController: UIViewController {
     if (FBSession.activeSession().state == FBSessionState.Open
       || FBSession.activeSession().state == FBSessionState.OpenTokenExtended) {
 
+      // Logout
+
       FBSession.activeSession().closeAndClearTokenInformation()
       println("closeAndClearTokenInformation")
     } else {
@@ -32,9 +34,6 @@ class ViewController: UIViewController {
         allowLoginUI: true) { session, state, error in
 
         println("openActiveSessionWithReadPermissions callback")
-
-        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
-        appDelegate.sessionStateChanged(session, state: state, error: error)
       }
     }
   }

@@ -13,22 +13,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
 
-
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
-    if FBSession.activeSession().state == FBSessionState.CreatedTokenLoaded {
-      FBSession.openActiveSessionWithReadPermissions(["public_profile"],
-        allowLoginUI: false) { sessison, state, error in
-
-        self.sessionStateChanged(sessison, state: state, error: error)
-      }
-    }
-
     return true
-  }
-
-  func sessionStateChanged(session: FBSession,  state: FBSessionState, error: NSError) {
-    println("sessionStateChanged \(state.rawValue)")
   }
 
   func applicationWillResignActive(application: UIApplication) {
@@ -48,9 +35,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func applicationDidBecomeActive(application: UIApplication) {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 
-//    FBAppEvents.activateApp()
-
-    FBAppCall.handleDidBecomeActive()
   }
 
   func applicationWillTerminate(application: UIApplication) {
@@ -59,10 +43,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
 
-    println("Application handle open URL")
-
-    let urlHandled = FBAppCall.handleOpenURL(url, sourceApplication: sourceApplication)
-    return urlHandled
+    let wasHandled = FBAppCall.handleOpenURL(url, sourceApplication: sourceApplication)
+    return wasHandled
   }
 }
 
