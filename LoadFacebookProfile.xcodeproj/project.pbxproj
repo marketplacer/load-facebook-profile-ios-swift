@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B8CED0A1A8C07B200643969 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B8CED091A8C07B200643969 /* FacebookSDK.framework */; };
 		2BD0E5901A8AC1240095C31F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0E58F1A8AC1240095C31F /* AppDelegate.swift */; };
 		2BD0E5921A8AC1240095C31F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0E5911A8AC1240095C31F /* ViewController.swift */; };
 		2BD0E5951A8AC1240095C31F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BD0E5931A8AC1240095C31F /* Main.storyboard */; };
 		2BD0E5971A8AC1240095C31F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BD0E5961A8AC1240095C31F /* Images.xcassets */; };
 		2BD0E59A1A8AC1240095C31F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BD0E5981A8AC1240095C31F /* LaunchScreen.xib */; };
 		2BD0E5A61A8AC1240095C31F /* LoginWithFacebookSDKCustomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0E5A51A8AC1240095C31F /* LoginWithFacebookSDKCustomTests.swift */; };
-		2BD0E5B01A8AC2F40095C31F /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BD0E5AF1A8AC2F40095C31F /* FacebookSDK.framework */; };
 		2BD0E5B21A8AC3700095C31F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BD0E5B11A8AC3700095C31F /* Default-568h@2x.png */; };
 		2BD8CAEA1A8AFF730045BF40 /* TegFacebookUserLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD8CAE91A8AFF730045BF40 /* TegFacebookUserLoader.swift */; };
 		2BD8CAEC1A8B02C50045BF40 /* TegFacebookUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD8CAEB1A8B02C50045BF40 /* TegFacebookUser.swift */; };
@@ -30,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B8CED091A8C07B200643969 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = "../../../../Documents/facebook-ios-sdk/build/FacebookSDK.framework"; sourceTree = "<group>"; };
 		2BD0E58A1A8AC1240095C31F /* LoadFacebookProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoadFacebookProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BD0E58E1A8AC1240095C31F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BD0E58F1A8AC1240095C31F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,7 +41,6 @@
 		2BD0E59F1A8AC1240095C31F /* LoadFacebookProfileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoadFacebookProfileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BD0E5A41A8AC1240095C31F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BD0E5A51A8AC1240095C31F /* LoginWithFacebookSDKCustomTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithFacebookSDKCustomTests.swift; sourceTree = "<group>"; };
-		2BD0E5AF1A8AC2F40095C31F /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = "../../../../Documents/facebook-ios-sdk/build/FacebookSDK.framework"; sourceTree = "<group>"; };
 		2BD0E5B11A8AC3700095C31F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		2BD0E5B31A8AC57A0095C31F /* LoadFacebookProfile-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LoadFacebookProfile-Bridging-Header.h"; sourceTree = "<group>"; };
 		2BD8CAE91A8AFF730045BF40 /* TegFacebookUserLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TegFacebookUserLoader.swift; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BD0E5B01A8AC2F40095C31F /* FacebookSDK.framework in Frameworks */,
+				2B8CED0A1A8C07B200643969 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,7 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				2BD0E5B11A8AC3700095C31F /* Default-568h@2x.png */,
-				2BD0E5AF1A8AC2F40095C31F /* FacebookSDK.framework */,
+				2B8CED091A8C07B200643969 /* FacebookSDK.framework */,
 				2BD0E58C1A8AC1240095C31F /* LoadFacebookProfile */,
 				2BD0E5A21A8AC1240095C31F /* LoadFacebookProfileTests */,
 				2BD0E58B1A8AC1240095C31F /* Products */,
