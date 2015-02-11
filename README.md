@@ -15,7 +15,11 @@ Facebook user ID and access token can be used to authenticate Facebook user in y
 
 ## Setup
 
-1. Add Facebook SDK to your app. One needs to create a Facebook app, add Facebook SDK framework to your project and setup plist keys. Follow instructions on Facebook developer pages.
+1. Add Facebook SDK to your app. Follow instructions on Facebook developer pages:
+  1. One needs to create a Facebook app
+  2. Add Facebook SDK framework to your project
+  3. Setup plist keys. 
+  4. Add `FBAppCall.handleOpenURL` to application(application, openUrl...) of your app delegate.
 
 2. Copy [TegFacebookUser.swift](https://raw.githubusercontent.com/exchangegroup/load-facebook-profile-ios-swift/master/LoadFacebookProfile/TegFacebookUser.swift) and [TegFacebookUserLoader.swift](https://raw.githubusercontent.com/exchangegroup/load-facebook-profile-ios-swift/master/LoadFacebookProfile/TegFacebookUserLoader.swift) into your project.
 
