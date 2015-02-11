@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2BD0E5891A8AC1240095C31F"
-               BuildableName = "LoginWithFacebookSDKCustom.app"
-               BlueprintName = "LoginWithFacebookSDKCustom"
-               ReferencedContainer = "container:LoginWithFacebookSDKCustom.xcodeproj">
+               BuildableName = "LoadFacebookProfile.app"
+               BlueprintName = "LoadFacebookProfile"
+               ReferencedContainer = "container:LoadFacebookProfile.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2BD0E59E1A8AC1240095C31F"
-               BuildableName = "LoginWithFacebookSDKCustomTests.xctest"
-               BlueprintName = "LoginWithFacebookSDKCustomTests"
-               ReferencedContainer = "container:LoginWithFacebookSDKCustom.xcodeproj">
+               BuildableName = "LoadFacebookProfileTests.xctest"
+               BlueprintName = "LoadFacebookProfileTests"
+               ReferencedContainer = "container:LoadFacebookProfile.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2BD0E59E1A8AC1240095C31F"
-               BuildableName = "LoginWithFacebookSDKCustomTests.xctest"
-               BlueprintName = "LoginWithFacebookSDKCustomTests"
-               ReferencedContainer = "container:LoginWithFacebookSDKCustom.xcodeproj">
+               BuildableName = "LoadFacebookProfileTests.xctest"
+               BlueprintName = "LoadFacebookProfileTests"
+               ReferencedContainer = "container:LoadFacebookProfile.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2BD0E5891A8AC1240095C31F"
-            BuildableName = "LoginWithFacebookSDKCustom.app"
-            BlueprintName = "LoginWithFacebookSDKCustom"
-            ReferencedContainer = "container:LoginWithFacebookSDKCustom.xcodeproj">
+            BuildableName = "LoadFacebookProfile.app"
+            BlueprintName = "LoadFacebookProfile"
+            ReferencedContainer = "container:LoadFacebookProfile.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2BD0E5891A8AC1240095C31F"
-            BuildableName = "LoginWithFacebookSDKCustom.app"
-            BlueprintName = "LoginWithFacebookSDKCustom"
-            ReferencedContainer = "container:LoginWithFacebookSDKCustom.xcodeproj">
+            BuildableName = "LoadFacebookProfile.app"
+            BlueprintName = "LoadFacebookProfile"
+            ReferencedContainer = "container:LoadFacebookProfile.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2BD0E5891A8AC1240095C31F"
-            BuildableName = "LoginWithFacebookSDKCustom.app"
-            BlueprintName = "LoginWithFacebookSDKCustom"
-            ReferencedContainer = "container:LoginWithFacebookSDKCustom.xcodeproj">
+            BuildableName = "LoadFacebookProfile.app"
+            BlueprintName = "LoadFacebookProfile"
+            ReferencedContainer = "container:LoadFacebookProfile.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

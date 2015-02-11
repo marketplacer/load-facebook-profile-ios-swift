@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:LoginWithFacebookSDKCustom.xcodeproj">
+      location = "self:LoadFacebookProfile.xcodeproj">
    </FileRef>
 </Workspace>

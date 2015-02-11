@@ -30,14 +30,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2BD0E58A1A8AC1240095C31F /* LoginWithFacebookSDKCustom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginWithFacebookSDKCustom.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BD0E58A1A8AC1240095C31F /* LoadFacebookProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoadFacebookProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BD0E58E1A8AC1240095C31F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BD0E58F1A8AC1240095C31F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BD0E5911A8AC1240095C31F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2BD0E5941A8AC1240095C31F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2BD0E5961A8AC1240095C31F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2BD0E5991A8AC1240095C31F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		2BD0E59F1A8AC1240095C31F /* LoginWithFacebookSDKCustomTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginWithFacebookSDKCustomTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BD0E59F1A8AC1240095C31F /* LoadFacebookProfileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoadFacebookProfileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BD0E5A41A8AC1240095C31F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BD0E5A51A8AC1240095C31F /* LoginWithFacebookSDKCustomTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithFacebookSDKCustomTests.swift; sourceTree = "<group>"; };
 		2BD0E5AF1A8AC2F40095C31F /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = "../../../../Documents/facebook-ios-sdk/build/FacebookSDK.framework"; sourceTree = "<group>"; };
@@ -80,8 +80,8 @@
 		2BD0E58B1A8AC1240095C31F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2BD0E58A1A8AC1240095C31F /* LoginWithFacebookSDKCustom.app */,
-				2BD0E59F1A8AC1240095C31F /* LoginWithFacebookSDKCustomTests.xctest */,
+				2BD0E58A1A8AC1240095C31F /* LoadFacebookProfile.app */,
+				2BD0E59F1A8AC1240095C31F /* LoadFacebookProfileTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,9 +138,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2BD0E5891A8AC1240095C31F /* LoginWithFacebookSDKCustom */ = {
+		2BD0E5891A8AC1240095C31F /* LoadFacebookProfile */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2BD0E5A91A8AC1240095C31F /* Build configuration list for PBXNativeTarget "LoginWithFacebookSDKCustom" */;
+			buildConfigurationList = 2BD0E5A91A8AC1240095C31F /* Build configuration list for PBXNativeTarget "LoadFacebookProfile" */;
 			buildPhases = (
 				2BD0E5861A8AC1240095C31F /* Sources */,
 				2BD0E5871A8AC1240095C31F /* Frameworks */,
@@ -150,14 +150,14 @@
 			);
 			dependencies = (
 			);
-			name = LoginWithFacebookSDKCustom;
+			name = LoadFacebookProfile;
 			productName = LoginWithFacebookSDKCustom;
-			productReference = 2BD0E58A1A8AC1240095C31F /* LoginWithFacebookSDKCustom.app */;
+			productReference = 2BD0E58A1A8AC1240095C31F /* LoadFacebookProfile.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2BD0E59E1A8AC1240095C31F /* LoginWithFacebookSDKCustomTests */ = {
+		2BD0E59E1A8AC1240095C31F /* LoadFacebookProfileTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2BD0E5AC1A8AC1240095C31F /* Build configuration list for PBXNativeTarget "LoginWithFacebookSDKCustomTests" */;
+			buildConfigurationList = 2BD0E5AC1A8AC1240095C31F /* Build configuration list for PBXNativeTarget "LoadFacebookProfileTests" */;
 			buildPhases = (
 				2BD0E59B1A8AC1240095C31F /* Sources */,
 				2BD0E59C1A8AC1240095C31F /* Frameworks */,
@@ -168,9 +168,9 @@
 			dependencies = (
 				2BD0E5A11A8AC1240095C31F /* PBXTargetDependency */,
 			);
-			name = LoginWithFacebookSDKCustomTests;
+			name = LoadFacebookProfileTests;
 			productName = LoginWithFacebookSDKCustomTests;
-			productReference = 2BD0E59F1A8AC1240095C31F /* LoginWithFacebookSDKCustomTests.xctest */;
+			productReference = 2BD0E59F1A8AC1240095C31F /* LoadFacebookProfileTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -191,7 +191,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2BD0E5851A8AC1240095C31F /* Build configuration list for PBXProject "LoginWithFacebookSDKCustom" */;
+			buildConfigurationList = 2BD0E5851A8AC1240095C31F /* Build configuration list for PBXProject "LoadFacebookProfile" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -204,8 +204,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2BD0E5891A8AC1240095C31F /* LoginWithFacebookSDKCustom */,
-				2BD0E59E1A8AC1240095C31F /* LoginWithFacebookSDKCustomTests */,
+				2BD0E5891A8AC1240095C31F /* LoadFacebookProfile */,
+				2BD0E59E1A8AC1240095C31F /* LoadFacebookProfileTests */,
 			);
 		};
 /* End PBXProject section */
@@ -256,7 +256,7 @@
 /* Begin PBXTargetDependency section */
 		2BD0E5A11A8AC1240095C31F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2BD0E5891A8AC1240095C31F /* LoginWithFacebookSDKCustom */;
+			target = 2BD0E5891A8AC1240095C31F /* LoadFacebookProfile */;
 			targetProxy = 2BD0E5A01A8AC1240095C31F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -371,7 +371,7 @@
 				);
 				INFOPLIST_FILE = LoginWithFacebookSDKCustom/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = LoadFacebookProfile;
 				SWIFT_OBJC_BRIDGING_HEADER = "LoginWithFacebookSDKCustom/LoginWithFacebookSDKCustom-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -388,7 +388,7 @@
 				);
 				INFOPLIST_FILE = LoginWithFacebookSDKCustom/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = LoadFacebookProfile;
 				SWIFT_OBJC_BRIDGING_HEADER = "LoginWithFacebookSDKCustom/LoginWithFacebookSDKCustom-Bridging-Header.h";
 			};
 			name = Release;
@@ -407,8 +407,8 @@
 				);
 				INFOPLIST_FILE = LoginWithFacebookSDKCustomTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LoginWithFacebookSDKCustom.app/LoginWithFacebookSDKCustom";
+				PRODUCT_NAME = LoadFacebookProfileTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LoadFacebookProfile.app/LoadFacebookProfile";
 			};
 			name = Debug;
 		};
@@ -422,15 +422,15 @@
 				);
 				INFOPLIST_FILE = LoginWithFacebookSDKCustomTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LoginWithFacebookSDKCustom.app/LoginWithFacebookSDKCustom";
+				PRODUCT_NAME = LoadFacebookProfileTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LoadFacebookProfile.app/LoadFacebookProfile";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2BD0E5851A8AC1240095C31F /* Build configuration list for PBXProject "LoginWithFacebookSDKCustom" */ = {
+		2BD0E5851A8AC1240095C31F /* Build configuration list for PBXProject "LoadFacebookProfile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2BD0E5A71A8AC1240095C31F /* Debug */,
@@ -439,7 +439,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2BD0E5A91A8AC1240095C31F /* Build configuration list for PBXNativeTarget "LoginWithFacebookSDKCustom" */ = {
+		2BD0E5A91A8AC1240095C31F /* Build configuration list for PBXNativeTarget "LoadFacebookProfile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2BD0E5AA1A8AC1240095C31F /* Debug */,
@@ -448,7 +448,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2BD0E5AC1A8AC1240095C31F /* Build configuration list for PBXNativeTarget "LoginWithFacebookSDKCustomTests" */ = {
+		2BD0E5AC1A8AC1240095C31F /* Build configuration list for PBXNativeTarget "LoadFacebookProfileTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2BD0E5AD1A8AC1240095C31F /* Debug */,
