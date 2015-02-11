@@ -26,7 +26,6 @@ class ViewController: UIViewController {
       || FBSession.activeSession().state == FBSessionState.OpenTokenExtended) {
 
       // Logout
-
       FBSession.activeSession().closeAndClearTokenInformation()
       println("closeAndClearTokenInformation")
     } else {
