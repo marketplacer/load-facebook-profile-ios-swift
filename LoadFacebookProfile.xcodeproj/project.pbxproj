@@ -42,7 +42,7 @@
 		2BD0E5A51A8AC1240095C31F /* LoginWithFacebookSDKCustomTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithFacebookSDKCustomTests.swift; sourceTree = "<group>"; };
 		2BD0E5AF1A8AC2F40095C31F /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = "../../../../Documents/facebook-ios-sdk/build/FacebookSDK.framework"; sourceTree = "<group>"; };
 		2BD0E5B11A8AC3700095C31F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		2BD0E5B31A8AC57A0095C31F /* LoginWithFacebookSDKCustom-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LoginWithFacebookSDKCustom-Bridging-Header.h"; sourceTree = "<group>"; };
+		2BD0E5B31A8AC57A0095C31F /* LoadFacebookProfile-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LoadFacebookProfile-Bridging-Header.h"; sourceTree = "<group>"; };
 		2BD8CAE91A8AFF730045BF40 /* TegFacebookUserLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TegFacebookUserLoader.swift; sourceTree = "<group>"; };
 		2BD8CAEB1A8B02C50045BF40 /* TegFacebookUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TegFacebookUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,8 +71,8 @@
 			children = (
 				2BD0E5B11A8AC3700095C31F /* Default-568h@2x.png */,
 				2BD0E5AF1A8AC2F40095C31F /* FacebookSDK.framework */,
-				2BD0E58C1A8AC1240095C31F /* LoginWithFacebookSDKCustom */,
-				2BD0E5A21A8AC1240095C31F /* LoginWithFacebookSDKCustomTests */,
+				2BD0E58C1A8AC1240095C31F /* LoadFacebookProfile */,
+				2BD0E5A21A8AC1240095C31F /* LoadFacebookProfileTests */,
 				2BD0E58B1A8AC1240095C31F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,7 +86,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2BD0E58C1A8AC1240095C31F /* LoginWithFacebookSDKCustom */ = {
+		2BD0E58C1A8AC1240095C31F /* LoadFacebookProfile */ = {
 			isa = PBXGroup;
 			children = (
 				2BD8CAE81A8AFF5C0045BF40 /* Lib */,
@@ -96,9 +96,9 @@
 				2BD0E5961A8AC1240095C31F /* Images.xcassets */,
 				2BD0E5981A8AC1240095C31F /* LaunchScreen.xib */,
 				2BD0E58D1A8AC1240095C31F /* Supporting Files */,
-				2BD0E5B31A8AC57A0095C31F /* LoginWithFacebookSDKCustom-Bridging-Header.h */,
+				2BD0E5B31A8AC57A0095C31F /* LoadFacebookProfile-Bridging-Header.h */,
 			);
-			path = LoginWithFacebookSDKCustom;
+			path = LoadFacebookProfile;
 			sourceTree = "<group>";
 		};
 		2BD0E58D1A8AC1240095C31F /* Supporting Files */ = {
@@ -109,13 +109,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		2BD0E5A21A8AC1240095C31F /* LoginWithFacebookSDKCustomTests */ = {
+		2BD0E5A21A8AC1240095C31F /* LoadFacebookProfileTests */ = {
 			isa = PBXGroup;
 			children = (
 				2BD0E5A51A8AC1240095C31F /* LoginWithFacebookSDKCustomTests.swift */,
 				2BD0E5A31A8AC1240095C31F /* Supporting Files */,
 			);
-			path = LoginWithFacebookSDKCustomTests;
+			path = LoadFacebookProfileTests;
 			sourceTree = "<group>";
 		};
 		2BD0E5A31A8AC1240095C31F /* Supporting Files */ = {
@@ -369,10 +369,10 @@
 					"$(inherited)",
 					"/Users/evgenyneu/Documents/facebook-ios-sdk/build",
 				);
-				INFOPLIST_FILE = LoginWithFacebookSDKCustom/Info.plist;
+				INFOPLIST_FILE = LoadFacebookProfile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = LoadFacebookProfile;
-				SWIFT_OBJC_BRIDGING_HEADER = "LoginWithFacebookSDKCustom/LoginWithFacebookSDKCustom-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "LoadFacebookProfile/LoadFacebookProfile-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -386,10 +386,10 @@
 					"$(inherited)",
 					"/Users/evgenyneu/Documents/facebook-ios-sdk/build",
 				);
-				INFOPLIST_FILE = LoginWithFacebookSDKCustom/Info.plist;
+				INFOPLIST_FILE = LoadFacebookProfile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = LoadFacebookProfile;
-				SWIFT_OBJC_BRIDGING_HEADER = "LoginWithFacebookSDKCustom/LoginWithFacebookSDKCustom-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "LoadFacebookProfile/LoadFacebookProfile-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -405,7 +405,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = LoginWithFacebookSDKCustomTests/Info.plist;
+				INFOPLIST_FILE = LoadFacebookProfileTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = LoadFacebookProfileTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LoadFacebookProfile.app/LoadFacebookProfile";
@@ -420,7 +420,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = LoginWithFacebookSDKCustomTests/Info.plist;
+				INFOPLIST_FILE = LoadFacebookProfileTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = LoadFacebookProfileTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LoadFacebookProfile.app/LoadFacebookProfile";

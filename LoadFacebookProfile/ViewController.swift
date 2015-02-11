@@ -1,7 +1,4 @@
 //
-//  ViewController.swift
-//  LoginWithFacebookSDKCustom
-//
 //  Created by Evgenii Neumerzhitckii on 11/02/2015.
 //  Copyright (c) 2015 The Exchange Group Pty Ltd. All rights reserved.
 //
