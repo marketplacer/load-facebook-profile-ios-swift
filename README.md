@@ -1,4 +1,4 @@
-# iOS demo app to login to Facebook using code with Facebook SDK
+# iOS demo app to load Facebook user profile using Facebook SDK
 
 This demo uses code to get Facebook profile, user id and access token. It does not use the Facebook login button UI from the SDK.
 
