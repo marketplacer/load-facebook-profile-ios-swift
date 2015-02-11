@@ -34,3 +34,7 @@ In order to login the user one needs to verify its user id on server side. Send 
 ```
 https://graph.facebook.com/me?fields=id&access_token=YOUR_ACCCESS_TOKEN
 ```
+
+## Repository home
+
+https://github.com/exchangegroup/load-facebook-profile-ios-swift
