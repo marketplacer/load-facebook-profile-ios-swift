@@ -34,10 +34,11 @@ class ViewController: UIViewController {
     }
     
     fields.append("Access token: \(user.accessToken)")
-    
-    println(user.accessToken)
-    
-    userInfoLabel.text = join("\n\n", fields)
+
+    let outputText = join("\n\n", fields)
+
+    userInfoLabel.text = outputText
+    println(outputText)
   }
 }
 
