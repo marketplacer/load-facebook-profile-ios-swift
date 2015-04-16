@@ -1,6 +1,6 @@
 import Foundation
 
-struct TegFacebookUser {
+public struct TegFacebookUser {
   let id: String
   let accessToken: String
   let email: String?
