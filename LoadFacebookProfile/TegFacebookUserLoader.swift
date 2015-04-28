@@ -31,9 +31,7 @@ class TegFacebookUserLoader {
   }
   
   private class func logOut() {
-    if let currentSession = FBSession.activeSession() {
-      currentSession.closeAndClearTokenInformation()
-    }
+    FBSession.activeSession()?.closeAndClearTokenInformation()
   }
   
   private class func loadFacebookMeInfo(onSuccess: (TegFacebookUser) -> ()) {
@@ -41,37 +39,31 @@ class TegFacebookUserLoader {
     FBRequestConnection.startForMeWithCompletionHandler { connection, result, error in
       if error != nil { return }
       
-      if let currentUserData = result as? NSDictionary {
-        if let currentUser = self.parseMeData(currentUserData) {
-          onSuccess(currentUser)
-        }
+      if let userData = result as? NSDictionary,
+        let user = self.parseMeData(userData) {
+        
+        onSuccess(user)
       }
     }
   }
   
   private class func parseMeData(data: NSDictionary) -> TegFacebookUser? {
-    if let currentId = data["id"] as? String {
-      if let currenToken = accessToken {
-        return TegFacebookUser(
-          id: currentId,
-          accessToken: currenToken,
-          email: data["email"] as? String,
-          firstName: data["first_name"] as? String,
-          lastName: data["last_name"] as? String,
-          name: data["name"] as? String)
-      }
+    if let id = data["id"] as? String,
+      let accessToken = accessToken {
+
+      return TegFacebookUser(
+        id: id,
+        accessToken: accessToken,
+        email: data["email"] as? String,
+        firstName: data["first_name"] as? String,
+        lastName: data["last_name"] as? String,
+        name: data["name"] as? String)
     }
     
     return nil
   }
   
   private class var accessToken: String? {
-    if let currentSession = FBSession.activeSession() {
-      if let currentAccessToken = currentSession.accessTokenData {
-        return currentAccessToken.accessToken
-      }
-    }
-    
-    return nil
+    return FBSession.activeSession()?.accessTokenData?.accessToken
   }
 }

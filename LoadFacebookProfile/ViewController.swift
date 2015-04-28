@@ -20,12 +20,12 @@ class ViewController: UIViewController {
   private func onUserLoaded(user: TegFacebookUser) {
     var fields = ["User id: \(user.id)"]
 
-    if let currentName = user.name {
-      fields.append("Name: \(currentName)")
+    if let name = user.name {
+      fields.append("Name: \(name)")
     }
     
-    if let currentEmail = user.email {
-      fields.append("Email: \(currentEmail)")
+    if let email = user.email {
+      fields.append("Email: \(email)")
     }
     
     fields.append("Access token: \(user.accessToken)")
