@@ -17,6 +17,9 @@ The helper function can be useful for those who just need to load a Facebook use
 ## To run this demo app
 
 1. Open `Info.plist` file.
+2. Update "Bundle identifier", "URL types", "FacebookAppID" and "FacebookDisplayName" with your facebook app information. See [Facebook iOS SDK](https://developers.facebook.com/docs/ios/getting-started) for more details.
+
+<img src='https://raw.githubusercontent.com/exchangegroup/load-facebook-profile-ios-swift/master/graphics/facebook_demo_update_info_plist.png' width='616' alt='change plist'>
 
 ## Setup in your app
 
