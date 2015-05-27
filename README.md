@@ -14,11 +14,14 @@ The helper function can be useful for those who just need to load a Facebook use
 
 <img src="https://github.com/exchangegroup/load-facebook-profile-ios-swift/raw/master/graphics/load_facebook_profile_ios_swift.png" alt="Load Facebook user profile on iOS swift with Facebook SDK" width="320">
 
-## Setup
+## To run this demo app
 
-1. Add Facebook SDK to your app. Follow instructions on Facebook developer pages:
-2. See [Facebook iOS SDK](https://developers.facebook.com/docs/ios/getting-started)
-3. Copy [TegFacebookUser.swift](https://raw.githubusercontent.com/exchangegroup/load-facebook-profile-ios-swift/master/LoadFacebookProfile/TegFacebookUser.swift) and [TegFacebookUserLoader.swift](https://raw.githubusercontent.com/exchangegroup/load-facebook-profile-ios-swift/master/LoadFacebookProfile/TegFacebookUserLoader.swift) into your project.
+1. Open `Info.plist` file.
+
+## Setup in your app
+
+1. Add Facebook SDK to your app. Follow instructions on Facebook developer pages. See [Facebook iOS SDK](https://developers.facebook.com/docs/ios/getting-started)
+1. Copy [TegFacebookUser.swift](https://raw.githubusercontent.com/exchangegroup/load-facebook-profile-ios-swift/master/LoadFacebookProfile/TegFacebookUser.swift) and [TegFacebookUserLoader.swift](https://raw.githubusercontent.com/exchangegroup/load-facebook-profile-ios-swift/master/LoadFacebookProfile/TegFacebookUserLoader.swift) into your project.
 
 ## Usage
 
