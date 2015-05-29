@@ -1,4 +1,5 @@
 import UIKit
+import LoadFacebookProfileKit
 
 class ViewController: UIViewController {
   @IBOutlet weak var loginLogoutButton: UIButton!
@@ -20,8 +21,13 @@ class ViewController: UIViewController {
   @IBAction func onLoginWithFacebookButtonTapped(sender: AnyObject) {
     userInfoLabel.text = ""
     
-    loader.load(askEmail: true) { user in
-      self.onUserLoaded(user)
+    loader.load(askEmail: true).onComplete { [weak self] result in
+      switch result {
+      case .Success(let boxedUser):
+        self?.onUserLoaded(boxedUser.value)
+      case .Failure(let boxedError):
+        self?.userInfoLabel.text = boxedError.value.nsError.localizedDescription
+      }
     }
   }
   
