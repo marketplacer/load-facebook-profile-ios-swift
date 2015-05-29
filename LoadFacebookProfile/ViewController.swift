@@ -1,5 +1,6 @@
 import UIKit
 import LoadFacebookProfileKit
+import BrightFutures
 
 class ViewController: UIViewController {
   @IBOutlet weak var loginLogoutButton: UIButton!
@@ -7,10 +8,18 @@ class ViewController: UIViewController {
   
   private let loader: TegFacebookUserLoader
   
+  var token: InvalidationToken
+  
   required init(coder aDecoder: NSCoder) {
     loader = TegFacebookUserLoader()
+    token = InvalidationToken()
     
     super.init(coder: aDecoder)
+  }
+  
+  deinit {
+    token.invalidate()
+    token = InvalidationToken()
   }
   
   override func viewDidLoad() {
@@ -21,7 +30,7 @@ class ViewController: UIViewController {
   @IBAction func onLoginWithFacebookButtonTapped(sender: AnyObject) {
     userInfoLabel.text = ""
     
-    loader.load(askEmail: true).onComplete { [weak self] result in
+    loader.load(askEmail: true).onComplete(token: token) { [weak self] result in
       switch result {
       case .Success(let boxedUser):
         self?.onUserLoaded(boxedUser.value)
