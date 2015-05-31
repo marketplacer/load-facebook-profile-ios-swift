@@ -1,19 +1,26 @@
 import Foundation
 import BrightFutures
 
+public let TegFacebookUserLoaderErrorDomain: String = "com.MarketPlacer.LoadFacebookProfileKit"
+
 public enum TegFacebookUserLoaderError: ErrorType {
-  case Parsing, GraphRequest(error: NSError?), LoginFailed(error: NSError?), LoginCanceled
+  case Parsing
+  case GraphRequest(error: NSError?)
+  case LoginFailed(error: NSError?)
+  case LoginCanceled
   
   public var nsError: NSError {
     switch self {
     case .Parsing:
-      return NSError(domain: "com.marketplacer.loadfacebookprofilekit", code: 100, userInfo: nil)
+      return NSError(domain: TegFacebookUserLoaderErrorDomain, code: 100, userInfo: nil)
     case .GraphRequest(let error):
-      return error ?? NSError(domain: "com.marketplacer.loadfacebookprofilekit", code: 101, userInfo: nil)
+      let userInfo = error.map { [NSUnderlyingErrorKey: $0] }
+      return NSError(domain: TegFacebookUserLoaderErrorDomain, code: 101, userInfo: userInfo)
     case .LoginFailed(let error):
-      return error ?? NSError(domain: "com.marketplacer.loadfacebookprofilekit", code: 102, userInfo: nil)
+      let userInfo = error.map { [NSUnderlyingErrorKey: $0] }
+      return NSError(domain: TegFacebookUserLoaderErrorDomain, code: 102, userInfo: userInfo)
     case .LoginCanceled:
-      return NSError(domain: "com.marketplacer.loadfacebookprofilekit", code: 103, userInfo: nil)
+      return NSError(domain: TegFacebookUserLoaderErrorDomain, code: 103, userInfo: nil)
     }
   }
 }
