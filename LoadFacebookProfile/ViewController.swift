@@ -6,12 +6,12 @@ class ViewController: UIViewController {
   @IBOutlet weak var loginLogoutButton: UIButton!
   @IBOutlet weak var userInfoLabel: UILabel!
   
-  private let loader: TegFacebookUserLoader
+  private let loader: FacebookUserLoader
   
   var token: InvalidationToken
   
   required init(coder aDecoder: NSCoder) {
-    loader = TegFacebookUserLoader()
+    loader = FacebookUserLoaderFactory.userLoader
     token = InvalidationToken()
     
     super.init(coder: aDecoder)
