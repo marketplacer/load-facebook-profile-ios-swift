@@ -27,7 +27,7 @@ extension TegFacebookUser {
       return .Success(Box(user))
     }
     
-    return .Failure(Box(.Parsing))
+    return accessToken == nil ? .Failure(Box(.AccessToken)) : .Failure(Box(.Parsing))
   }
   
   private static func parseFromMeData(dictionary: [String: AnyObject], accessToken: String) -> TegFacebookUser? {

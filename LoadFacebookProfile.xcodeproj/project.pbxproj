@@ -55,6 +55,7 @@
 		45D73BE01B16AE3C00D3FE08 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D73BA51B16A49600D3FE08 /* Result.framework */; };
 		45D73BE11B16AE3C00D3FE08 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BA75451B158801003095CC /* FBSDKCoreKit.framework */; };
 		45D73BE21B16AE3C00D3FE08 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BA75461B158801003095CC /* FBSDKLoginKit.framework */; };
+		45F0F19C1B1C04670076BBFE /* TegFacebookUserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A57BEE1B1C00B100EF583C /* TegFacebookUserSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +147,7 @@
 		459A8F781B1BDB550083F556 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = SOURCE_ROOT; };
 		459A8F9F1B1BE1200083F556 /* QuickSpecKIFHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickSpecKIFHelper.swift; sourceTree = "<group>"; };
 		459A8FA11B1BEE3D0083F556 /* TegFacebookUserLoaderErrorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TegFacebookUserLoaderErrorSpec.swift; sourceTree = "<group>"; };
+		45A57BEE1B1C00B100EF583C /* TegFacebookUserSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TegFacebookUserSpec.swift; sourceTree = "<group>"; };
 		45BA75451B158801003095CC /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		45BA75461B158801003095CC /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		45D73BA31B16A49600D3FE08 /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Box.framework; path = Carthage/Build/iOS/Box.framework; sourceTree = SOURCE_ROOT; };
@@ -318,6 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				459A8FA11B1BEE3D0083F556 /* TegFacebookUserLoaderErrorSpec.swift */,
+				45A57BEE1B1C00B100EF583C /* TegFacebookUserSpec.swift */,
 				45D73BCA1B16ADA400D3FE08 /* Supporting Files */,
 			);
 			path = LoadFacebookProfileKitTests;
@@ -534,6 +537,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45F0F19C1B1C04670076BBFE /* TegFacebookUserSpec.swift in Sources */,
 				459A8FA21B1BEE3D0083F556 /* TegFacebookUserLoaderErrorSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
