@@ -2,7 +2,7 @@ import Foundation
 import FBSDKLoginKit
 import BrightFutures
 
-extension FBSDKGraphRequest {
+public extension FBSDKGraphRequest {
   func startWithCompletionHandler<T>() -> (FBSDKGraphRequestConnection!, Future<T, TegFacebookUserLoaderError>) {
     let promise = Promise<T, TegFacebookUserLoaderError>()
     
