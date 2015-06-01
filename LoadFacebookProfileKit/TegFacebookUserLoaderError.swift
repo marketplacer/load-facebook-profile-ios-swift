@@ -8,6 +8,7 @@ public enum TegFacebookUserLoaderError: ErrorType {
   case GraphRequest(error: NSError?)
   case LoginFailed(error: NSError?)
   case LoginCanceled
+  case AccessToken
   
   public var nsError: NSError {
     switch self {
@@ -15,12 +16,27 @@ public enum TegFacebookUserLoaderError: ErrorType {
       return NSError(domain: TegFacebookUserLoaderErrorDomain, code: 100, userInfo: nil)
     case .GraphRequest(let error):
       let userInfo = error.map { [NSUnderlyingErrorKey: $0] }
-      return NSError(domain: TegFacebookUserLoaderErrorDomain, code: 101, userInfo: userInfo)
+      return NSError(domain: TegFacebookUserLoaderErrorDomain, code: 200, userInfo: userInfo)
     case .LoginFailed(let error):
       let userInfo = error.map { [NSUnderlyingErrorKey: $0] }
-      return NSError(domain: TegFacebookUserLoaderErrorDomain, code: 102, userInfo: userInfo)
+      return NSError(domain: TegFacebookUserLoaderErrorDomain, code: 300, userInfo: userInfo)
     case .LoginCanceled:
-      return NSError(domain: TegFacebookUserLoaderErrorDomain, code: 103, userInfo: nil)
+      return NSError(domain: TegFacebookUserLoaderErrorDomain, code: 301, userInfo: nil)
+    case .AccessToken:
+      return NSError(domain: TegFacebookUserLoaderErrorDomain, code: 302, userInfo: nil)
     }
+  }
+}
+
+extension TegFacebookUserLoaderError: Equatable {}
+
+public func == (lhs: TegFacebookUserLoaderError, rhs: TegFacebookUserLoaderError) -> Bool {
+  switch (lhs, rhs) {
+  case (.Parsing, .Parsing): return true
+  case (.GraphRequest(let lError), .GraphRequest(let rError)): return lError == rError
+  case (.LoginFailed(let lError), .LoginFailed(let rError)): return lError == rError
+  case (.LoginCanceled, .LoginCanceled): return true
+  case (.AccessToken, .AccessToken): return true
+  default: return false
   }
 }

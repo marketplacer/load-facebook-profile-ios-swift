@@ -20,6 +20,20 @@
                ReferencedContainer = "container:LoadFacebookProfile.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "45D73BC21B16ADA400D3FE08"
+               BuildableName = "LoadFacebookProfileKitTests.xctest"
+               BlueprintName = "LoadFacebookProfileKitTests"
+               ReferencedContainer = "container:LoadFacebookProfile.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
