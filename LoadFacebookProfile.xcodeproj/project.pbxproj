@@ -24,7 +24,6 @@
 		459A8F7F1B1BDB9E0083F556 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D73BA51B16A49600D3FE08 /* Result.framework */; };
 		459A8F801B1BDB9E0083F556 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 459A8F781B1BDB550083F556 /* Quick.framework */; };
 		459A8F811B1BDB9E0083F556 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 459A8F761B1BDB550083F556 /* Nimble.framework */; };
-		459A8F821B1BDB9E0083F556 /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 459A8F771B1BDB550083F556 /* OHHTTPStubs.framework */; };
 		459A8F8B1B1BDBC70083F556 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 459A8F781B1BDB550083F556 /* Quick.framework */; };
 		459A8F8C1B1BDBC70083F556 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 459A8F761B1BDB550083F556 /* Nimble.framework */; };
 		459A8F8E1B1BDBC70083F556 /* KIFFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 459A8F751B1BDB550083F556 /* KIFFramework.framework */; };
@@ -36,7 +35,6 @@
 		459A8F9B1B1BDC310083F556 /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 45D73BA51B16A49600D3FE08 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		459A8F9C1B1BDC310083F556 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 459A8F781B1BDB550083F556 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		459A8F9D1B1BDC310083F556 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 459A8F761B1BDB550083F556 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		459A8F9E1B1BDC310083F556 /* OHHTTPStubs.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 459A8F771B1BDB550083F556 /* OHHTTPStubs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		459A8FA01B1BE1200083F556 /* QuickSpecKIFHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459A8F9F1B1BE1200083F556 /* QuickSpecKIFHelper.swift */; };
 		459A8FA21B1BEE3D0083F556 /* TegFacebookUserLoaderErrorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459A8FA11B1BEE3D0083F556 /* TegFacebookUserLoaderErrorSpec.swift */; };
 		45CBE8E81B1C127400F714DC /* FBSDKGraphRequestTegExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CBE8E71B1C127400F714DC /* FBSDKGraphRequestTegExtensionsSpec.swift */; };
@@ -110,7 +108,6 @@
 				459A8F9B1B1BDC310083F556 /* Result.framework in CopyFiles */,
 				459A8F9C1B1BDC310083F556 /* Quick.framework in CopyFiles */,
 				459A8F9D1B1BDC310083F556 /* Nimble.framework in CopyFiles */,
-				459A8F9E1B1BDC310083F556 /* OHHTTPStubs.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,7 +144,6 @@
 		452915F71B17FD8800CDDDE6 /* FBSDKGraphRequest+TegExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FBSDKGraphRequest+TegExtensions.swift"; sourceTree = "<group>"; };
 		459A8F751B1BDB550083F556 /* KIFFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KIFFramework.framework; path = Carthage/Build/iOS/KIFFramework.framework; sourceTree = SOURCE_ROOT; };
 		459A8F761B1BDB550083F556 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = SOURCE_ROOT; };
-		459A8F771B1BDB550083F556 /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = Carthage/Build/iOS/OHHTTPStubs.framework; sourceTree = SOURCE_ROOT; };
 		459A8F781B1BDB550083F556 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = SOURCE_ROOT; };
 		459A8F9F1B1BE1200083F556 /* QuickSpecKIFHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickSpecKIFHelper.swift; sourceTree = "<group>"; };
 		459A8FA11B1BEE3D0083F556 /* TegFacebookUserLoaderErrorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TegFacebookUserLoaderErrorSpec.swift; sourceTree = "<group>"; };
@@ -213,7 +209,6 @@
 				459A8F7F1B1BDB9E0083F556 /* Result.framework in Frameworks */,
 				459A8F801B1BDB9E0083F556 /* Quick.framework in Frameworks */,
 				459A8F811B1BDB9E0083F556 /* Nimble.framework in Frameworks */,
-				459A8F821B1BDB9E0083F556 /* OHHTTPStubs.framework in Frameworks */,
 				45CBE8E91B1C133900F714DC /* FBSDKCoreKit.framework in Frameworks */,
 				45CBE8EA1B1C133900F714DC /* FBSDKLoginKit.framework in Frameworks */,
 			);
@@ -295,7 +290,6 @@
 				45D73BA51B16A49600D3FE08 /* Result.framework */,
 				459A8F781B1BDB550083F556 /* Quick.framework */,
 				459A8F761B1BDB550083F556 /* Nimble.framework */,
-				459A8F771B1BDB550083F556 /* OHHTTPStubs.framework */,
 				459A8F751B1BDB550083F556 /* KIFFramework.framework */,
 				45BA75451B158801003095CC /* FBSDKCoreKit.framework */,
 				45BA75461B158801003095CC /* FBSDKLoginKit.framework */,
