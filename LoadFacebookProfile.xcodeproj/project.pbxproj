@@ -59,6 +59,7 @@
 		45D73BE11B16AE3C00D3FE08 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BA75451B158801003095CC /* FBSDKCoreKit.framework */; };
 		45D73BE21B16AE3C00D3FE08 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BA75461B158801003095CC /* FBSDKLoginKit.framework */; };
 		45F0F19C1B1C04670076BBFE /* TegFacebookUserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A57BEE1B1C00B100EF583C /* TegFacebookUserSpec.swift */; };
+		45F170401B1C316200020BC5 /* TegFacebookUserLoaderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F1703F1B1C316200020BC5 /* TegFacebookUserLoaderSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,6 +164,7 @@
 		45D73BCB1B16ADA400D3FE08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45D73BD81B16ADFF00D3FE08 /* TegFacebookUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TegFacebookUser.swift; sourceTree = "<group>"; };
 		45D73BD91B16ADFF00D3FE08 /* TegFacebookUserLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TegFacebookUserLoader.swift; sourceTree = "<group>"; };
+		45F1703F1B1C316200020BC5 /* TegFacebookUserLoaderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TegFacebookUserLoaderSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,6 +330,7 @@
 				459A8FA11B1BEE3D0083F556 /* TegFacebookUserLoaderErrorSpec.swift */,
 				45A57BEE1B1C00B100EF583C /* TegFacebookUserSpec.swift */,
 				45CBE8E71B1C127400F714DC /* FBSDKGraphRequestTegExtensionsSpec.swift */,
+				45F1703F1B1C316200020BC5 /* TegFacebookUserLoaderSpec.swift */,
 				45D73BCA1B16ADA400D3FE08 /* Supporting Files */,
 			);
 			path = LoadFacebookProfileKitTests;
@@ -545,6 +548,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45F0F19C1B1C04670076BBFE /* TegFacebookUserSpec.swift in Sources */,
+				45F170401B1C316200020BC5 /* TegFacebookUserLoaderSpec.swift in Sources */,
 				459A8FA21B1BEE3D0083F556 /* TegFacebookUserLoaderErrorSpec.swift in Sources */,
 				45CBE8E81B1C127400F714DC /* FBSDKGraphRequestTegExtensionsSpec.swift in Sources */,
 			);
