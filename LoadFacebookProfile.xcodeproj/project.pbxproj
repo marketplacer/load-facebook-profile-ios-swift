@@ -37,6 +37,7 @@
 		459A8F9D1B1BDC310083F556 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 459A8F761B1BDB550083F556 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		459A8FA01B1BE1200083F556 /* QuickSpecKIFHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459A8F9F1B1BE1200083F556 /* QuickSpecKIFHelper.swift */; };
 		459A8FA21B1BEE3D0083F556 /* TegFacebookUserLoaderErrorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459A8FA11B1BEE3D0083F556 /* TegFacebookUserLoaderErrorSpec.swift */; };
+		45A791311B1E754A00DC7A7B /* Future+TegExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A791301B1E754A00DC7A7B /* Future+TegExtensions.swift */; };
 		45CBE8E81B1C127400F714DC /* FBSDKGraphRequestTegExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CBE8E71B1C127400F714DC /* FBSDKGraphRequestTegExtensionsSpec.swift */; };
 		45CBE8E91B1C133900F714DC /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BA75451B158801003095CC /* FBSDKCoreKit.framework */; };
 		45CBE8EA1B1C133900F714DC /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BA75461B158801003095CC /* FBSDKLoginKit.framework */; };
@@ -148,6 +149,7 @@
 		459A8F9F1B1BE1200083F556 /* QuickSpecKIFHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickSpecKIFHelper.swift; sourceTree = "<group>"; };
 		459A8FA11B1BEE3D0083F556 /* TegFacebookUserLoaderErrorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TegFacebookUserLoaderErrorSpec.swift; sourceTree = "<group>"; };
 		45A57BEE1B1C00B100EF583C /* TegFacebookUserSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TegFacebookUserSpec.swift; sourceTree = "<group>"; };
+		45A791301B1E754A00DC7A7B /* Future+TegExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Future+TegExtensions.swift"; sourceTree = "<group>"; };
 		45BA75451B158801003095CC /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		45BA75461B158801003095CC /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		45CBE8E71B1C127400F714DC /* FBSDKGraphRequestTegExtensionsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBSDKGraphRequestTegExtensionsSpec.swift; sourceTree = "<group>"; };
@@ -305,6 +307,7 @@
 				45D73BD91B16ADFF00D3FE08 /* TegFacebookUserLoader.swift */,
 				452915F51B17FCC900CDDDE6 /* FBSDKLoginManager+TegExtensions.swift */,
 				452915F71B17FD8800CDDDE6 /* FBSDKGraphRequest+TegExtensions.swift */,
+				45A791301B1E754A00DC7A7B /* Future+TegExtensions.swift */,
 				45D73BBB1B16ADA400D3FE08 /* Supporting Files */,
 			);
 			path = LoadFacebookProfileKit;
@@ -534,6 +537,7 @@
 				452915F61B17FCC900CDDDE6 /* FBSDKLoginManager+TegExtensions.swift in Sources */,
 				452915F41B17EA1100CDDDE6 /* TegFacebookUserLoaderError.swift in Sources */,
 				45D73BDB1B16ADFF00D3FE08 /* TegFacebookUser.swift in Sources */,
+				45A791311B1E754A00DC7A7B /* Future+TegExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
