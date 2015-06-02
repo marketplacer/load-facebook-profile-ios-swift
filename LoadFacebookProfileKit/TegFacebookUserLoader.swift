@@ -8,6 +8,7 @@ import Box
 
 public protocol FacebookUserLoader: class {
   func load(#askEmail: Bool) -> Future<TegFacebookUser, TegFacebookUserLoaderError>
+  func loadE(#askEmail: Bool) -> Future<TegFacebookUser, NSError>
 }
 
 public class FacebookUserLoaderFactory {
@@ -45,6 +46,10 @@ public class TegFacebookUserLoader: FacebookUserLoader {
     return login(askEmail: askEmail).flatMap(f: loadFacebookMeInfo)
   }
   
+  public func loadE(#askEmail: Bool) -> Future<TegFacebookUser, NSError> {
+    return load(askEmail: true).convertTegFacebookUserLoaderErrorToNSError()
+  }
+  
   private func login(#askEmail: Bool) -> Future<FBSDKLoginManagerLoginResult, TegFacebookUserLoaderError> {
     var permissions = ["public_profile"]
     
@@ -76,6 +81,11 @@ class FakeKIFFacebookUserLoader: FacebookUserLoader {
     let fakeUser = TegFacebookUser(id: "fake-user-id", accessToken: "fake-access-token", email: nil, firstName: nil, lastName: nil, name: nil)
     return Future<TegFacebookUser, TegFacebookUserLoaderError>.completeAfter(1, withValue: fakeUser)
   }
+  
+  func loadE(#askEmail: Bool) -> Future<TegFacebookUser, NSError> {
+    let future: Future<TegFacebookUser, TegFacebookUserLoaderError> = load(askEmail: true)
+    return load(askEmail: true).convertTegFacebookUserLoaderErrorToNSError()
+  }
 }
 
 // MARK: - Tests
@@ -86,6 +96,11 @@ class FakeFacebookUserLoader: FacebookUserLoader {
     let loginResult = FBSDKLoginManagerLoginResult(token: token, isCancelled: false, grantedPermissions: Set<NSObject>(), declinedPermissions:  Set<NSObject>())
     
     return loadFacebookMeInfo(loginResult)
+  }
+  
+  func loadE(#askEmail: Bool) -> Future<TegFacebookUser, NSError> {
+    let future: Future<TegFacebookUser, TegFacebookUserLoaderError> = load(askEmail: true)
+    return load(askEmail: true).convertTegFacebookUserLoaderErrorToNSError()
   }
   
   private func loadFacebookMeInfo(loginResult: FBSDKLoginManagerLoginResult) -> Future<TegFacebookUser, TegFacebookUserLoaderError> {
