@@ -15,8 +15,6 @@ public class FacebookUserLoaderFactory {
   public class var userLoader: FacebookUserLoader {
     if isKIFing() {
       return FakeKIFFacebookUserLoader()
-    } else if isTesting() {
-      return FakeFacebookUserLoader()
     } else {
       return TegFacebookUserLoader()
     }
@@ -25,19 +23,24 @@ public class FacebookUserLoaderFactory {
   private class func isKIFing() -> Bool {
     return NSClassFromString("KIFTestActor") != nil
   }
-  
-  class func isTesting() -> Bool {
-    return NSClassFromString("XCTest") != nil
-  }
 }
+
+// MARK: - FBSDKLoginManager Stubbing
+
+public protocol FacebookLoginManager: class {
+  func logInWithReadPermissions(permissions: [String]) -> Future<FBSDKLoginManagerLoginResult, TegFacebookUserLoaderError>
+  func logOut()
+}
+
+extension FBSDKLoginManager: FacebookLoginManager {}
 
 // MARK: - TegFacebookUserLoader
 
 public class TegFacebookUserLoader: FacebookUserLoader {
-  private let loginManager: FBSDKLoginManager
+  private let loginManager: FacebookLoginManager
   
-  public init() {
-    loginManager = FBSDKLoginManager()
+  public init(loginManager: FacebookLoginManager = FBSDKLoginManager()) {
+    self.loginManager = loginManager
   }
   
   public func load(#askEmail: Bool) -> Future<TegFacebookUser, TegFacebookUserLoaderError> {
@@ -85,30 +88,5 @@ class FakeKIFFacebookUserLoader: FacebookUserLoader {
   func loadE(#askEmail: Bool) -> Future<TegFacebookUser, NSError> {
     let future: Future<TegFacebookUser, TegFacebookUserLoaderError> = load(askEmail: true)
     return load(askEmail: true).convertTegFacebookUserLoaderErrorToNSError()
-  }
-}
-
-// MARK: - Tests
-
-class FakeFacebookUserLoader: FacebookUserLoader {
-  func load(#askEmail: Bool) -> Future<TegFacebookUser, TegFacebookUserLoaderError> {
-    let token = FBSDKAccessToken(tokenString: "test-token", permissions: nil, declinedPermissions: nil, appID: "test-app-id", userID: "test-user-id", expirationDate: NSDate(timeIntervalSinceNow: 120), refreshDate: NSDate(timeIntervalSinceNow: 240))
-    let loginResult = FBSDKLoginManagerLoginResult(token: token, isCancelled: false, grantedPermissions: Set<NSObject>(), declinedPermissions:  Set<NSObject>())
-    
-    return loadFacebookMeInfo(loginResult)
-  }
-  
-  func loadE(#askEmail: Bool) -> Future<TegFacebookUser, NSError> {
-    let future: Future<TegFacebookUser, TegFacebookUserLoaderError> = load(askEmail: true)
-    return load(askEmail: true).convertTegFacebookUserLoaderErrorToNSError()
-  }
-  
-  private func loadFacebookMeInfo(loginResult: FBSDKLoginManagerLoginResult) -> Future<TegFacebookUser, TegFacebookUserLoaderError> {
-    let request = FBSDKGraphRequest(graphPath: "me", parameters: nil)
-    let (_, future: Future<[String: AnyObject], TegFacebookUserLoaderError>) = request.startWithCompletionHandler()
-    
-    return future.flatMap { result in
-      TegFacebookUser.parse(result, accessToken: loginResult.token?.tokenString)
-    }
   }
 }

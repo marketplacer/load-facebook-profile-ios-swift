@@ -3,7 +3,7 @@ import FBSDKLoginKit
 import BrightFutures
 
 extension FBSDKLoginManager {
-  func logInWithReadPermissions(permissions: [String]) -> Future<FBSDKLoginManagerLoginResult, TegFacebookUserLoaderError> {
+  public func logInWithReadPermissions(permissions: [String]) -> Future<FBSDKLoginManagerLoginResult, TegFacebookUserLoaderError> {
     let promise = Promise<FBSDKLoginManagerLoginResult, TegFacebookUserLoaderError>()
     
     logInWithReadPermissions(permissions) { result, error in
