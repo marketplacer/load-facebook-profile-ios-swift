@@ -19,7 +19,6 @@ class ViewController: UIViewController {
   
   deinit {
     token.invalidate()
-    token = InvalidationToken()
   }
   
   override func viewDidLoad() {
@@ -29,6 +28,9 @@ class ViewController: UIViewController {
   
   @IBAction func onLoginWithFacebookButtonTapped(sender: AnyObject) {
     userInfoLabel.text = ""
+    
+    token.invalidate()
+    token = InvalidationToken()
     
     loader.load(askEmail: true).onComplete(token: token) { [weak self] result in
       switch result {
