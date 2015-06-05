@@ -24,15 +24,27 @@ The helper function can be useful for those who just need to load a Facebook use
 ## Setup in your app
 
 1. Add Facebook SDK to your app. Follow instructions on Facebook developer pages. See [Facebook iOS SDK](https://developers.facebook.com/docs/ios/getting-started)
-1. Copy [TegFacebookUser.swift](https://raw.githubusercontent.com/exchangegroup/load-facebook-profile-ios-swift/master/LoadFacebookProfile/TegFacebookUser.swift) and [TegFacebookUserLoader.swift](https://raw.githubusercontent.com/exchangegroup/load-facebook-profile-ios-swift/master/LoadFacebookProfile/TegFacebookUserLoader.swift) into your project.
+2. Add the following to your Cartfile
+
+```
+github "exchangegroup/load-facebook-profile-ios-swift"
+```
+
+3. If your are new to Carthage. See [Carthage instructions](https://github.com/Carthage/Carthage/blob/master/README.md)
 
 ## Usage
 
 ```swift
+import LoadFacebookProfileKit
+import BrightFutures
+
 let loader = TegFacebookUserLoader()
-loader.load(askEmail: false) { user in
-  // user profile is loaded
-}
+loader.load(askEmail: true)
+      .onSuccess(token: token) { user in
+         // user profile is loaded
+      }.onFailure(token: token) {error in
+        // error
+    }
 ```
 
 ## Profile fields can be empty
