@@ -1,15 +1,24 @@
 import UIKit
+import LoadFacebookProfileKit
+import BrightFutures
 
 class ViewController: UIViewController {
   @IBOutlet weak var loginLogoutButton: UIButton!
   @IBOutlet weak var userInfoLabel: UILabel!
   
-  private let loader: TegFacebookUserLoader
+  private let loader: FacebookUserLoader
+  
+  var token: InvalidationToken
   
   required init(coder aDecoder: NSCoder) {
-    loader = TegFacebookUserLoader()
+    loader = FacebookUserLoaderFactory.userLoader
+    token = InvalidationToken()
     
     super.init(coder: aDecoder)
+  }
+  
+  deinit {
+    token.invalidate()
   }
   
   override func viewDidLoad() {
@@ -20,8 +29,14 @@ class ViewController: UIViewController {
   @IBAction func onLoginWithFacebookButtonTapped(sender: AnyObject) {
     userInfoLabel.text = ""
     
-    loader.load(askEmail: true) { user in
-      self.onUserLoaded(user)
+    token.invalidate()
+    token = InvalidationToken()
+    
+    loader.load(askEmail: true)
+      .onSuccess(token: token) { [weak self] user in
+        self?.onUserLoaded(user)
+      }.onFailure(token: token) { [weak self] error in
+        self?.userInfoLabel.text = error.nsError.localizedDescription
     }
   }
   
