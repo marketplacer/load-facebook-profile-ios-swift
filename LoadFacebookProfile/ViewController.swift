@@ -32,13 +32,11 @@ class ViewController: UIViewController {
     token.invalidate()
     token = InvalidationToken()
     
-    loader.load(askEmail: true).onComplete(token: token) { [weak self] result in
-      switch result {
-      case .Success(let boxedUser):
-        self?.onUserLoaded(boxedUser.value)
-      case .Failure(let boxedError):
-        self?.userInfoLabel.text = boxedError.value.nsError.localizedDescription
-      }
+    loader.load(askEmail: true)
+      .onSuccess(token: token) { [weak self] user in
+        self?.onUserLoaded(user)
+      }.onFailure(token: token) { [weak self] error in
+        self?.userInfoLabel.text = error.nsError.localizedDescription
     }
   }
   
