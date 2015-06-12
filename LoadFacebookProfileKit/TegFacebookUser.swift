@@ -1,7 +1,6 @@
 import Foundation
 import BrightFutures
 import Result
-import Box
 
 public struct TegFacebookUser {
   public let id: String
@@ -11,7 +10,7 @@ public struct TegFacebookUser {
   public let lastName: String?
   public let name: String?
   
-  public init(id: String, accessToken: String, email: String?, firstName: String?, lastName: String?, name: String?) {
+  init(id: String, accessToken: String, email: String?, firstName: String?, lastName: String?, name: String?) {
     self.id = id
     self.accessToken = accessToken
     self.email = email
@@ -22,12 +21,12 @@ public struct TegFacebookUser {
 }
 
 extension TegFacebookUser {
-  public static func parse(dictionary: [String: AnyObject], accessToken: String?) -> Result<TegFacebookUser, TegFacebookUserLoaderError> {
+  static func parse(dictionary: [String: AnyObject], accessToken: String?) -> Result<TegFacebookUser, TegFacebookUserLoaderError> {
     if let accessToken = accessToken, let user = parseFromMeData(dictionary, accessToken: accessToken) {
-      return .Success(Box(user))
+      return .Success(user)
     }
     
-    return accessToken == nil ? .Failure(Box(.AccessToken)) : .Failure(Box(.Parsing))
+    return accessToken == nil ? .Failure(.AccessToken) : .Failure(.Parsing)
   }
   
   private static func parseFromMeData(dictionary: [String: AnyObject], accessToken: String) -> TegFacebookUser? {

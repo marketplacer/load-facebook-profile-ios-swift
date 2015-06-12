@@ -1,9 +1,8 @@
 import Foundation
 import Quick
 import Nimble
-import LoadFacebookProfileKit
 import Result
-import Box
+@testable import LoadFacebookProfileKit
 
 class TegFacebookUserSpec: QuickSpec {
   override func spec() {

@@ -6,27 +6,27 @@
 	<dict>
 		<key>Headers/BrightFutures-Swift.h</key>
 		<data>
-		js6dGNQGhAs+6JsPBbFvsX0UNJE=
+		D8mvr7zEOjPwPEzMl1/PnlGkfFA=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		syzyqrrywzU8mufcg9uBOY1AvoU=
+		cIPyo9/BShDt4sNlZNG5rQYXQVs=
 		</data>
 		<key>Modules/BrightFutures.swiftmodule/arm.swiftdoc</key>
 		<data>
-		UwGWF00CPCIvogM2vEBo/BhiBv0=
+		JmgB1KnkBxgX9+Nlsh6li16POPo=
 		</data>
 		<key>Modules/BrightFutures.swiftmodule/arm.swiftmodule</key>
 		<data>
-		/IiWUaUN+eV5dQ1S8LKCqxqIixM=
+		iGCWDjbPtHyNjCk/WBrwItsdKlQ=
 		</data>
 		<key>Modules/BrightFutures.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		R7UpdX52qPM+yWn4zpUuonuAhmU=
+		AFUU92jimdC1gxlpUhr6PBGm+5I=
 		</data>
 		<key>Modules/BrightFutures.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		Yg4cbBG7mxr5PM39iIbYq28DV0U=
+		Rl04faI1qONMeU5mXRW6RNwix+g=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -37,23 +37,23 @@
 	<dict>
 		<key>Headers/BrightFutures-Swift.h</key>
 		<data>
-		js6dGNQGhAs+6JsPBbFvsX0UNJE=
+		D8mvr7zEOjPwPEzMl1/PnlGkfFA=
 		</data>
 		<key>Modules/BrightFutures.swiftmodule/arm.swiftdoc</key>
 		<data>
-		UwGWF00CPCIvogM2vEBo/BhiBv0=
+		JmgB1KnkBxgX9+Nlsh6li16POPo=
 		</data>
 		<key>Modules/BrightFutures.swiftmodule/arm.swiftmodule</key>
 		<data>
-		/IiWUaUN+eV5dQ1S8LKCqxqIixM=
+		iGCWDjbPtHyNjCk/WBrwItsdKlQ=
 		</data>
 		<key>Modules/BrightFutures.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		R7UpdX52qPM+yWn4zpUuonuAhmU=
+		AFUU92jimdC1gxlpUhr6PBGm+5I=
 		</data>
 		<key>Modules/BrightFutures.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		Yg4cbBG7mxr5PM39iIbYq28DV0U=
+		Rl04faI1qONMeU5mXRW6RNwix+g=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>

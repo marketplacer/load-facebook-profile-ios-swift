@@ -3,8 +3,8 @@ import Nimble
 import FBSDKLoginKit
 import FBSDKCoreKit
 import BrightFutures
-import LoadFacebookProfileKit
 import OHHTTPStubs
+@testable import LoadFacebookProfileKit
 
 class TegFacebookUserLoaderSpec: QuickSpec {
   override func spec() {
@@ -41,9 +41,9 @@ class TegFacebookUserLoaderSpec: QuickSpec {
             
             OHHTTPStubs.stubRequestsPassingTest({ $0.URL!.host == "graph.facebook.com" }) { _ in
               let meResponse = ["id": "test-user-id"]
-              let data = NSJSONSerialization.dataWithJSONObject(meResponse, options:.PrettyPrinted, error: nil)
+              let data = try! NSJSONSerialization.dataWithJSONObject(meResponse, options:.PrettyPrinted)
               
-              return OHHTTPStubsResponse(data: data!, statusCode: 200, headers: nil)
+              return OHHTTPStubsResponse(data: data, statusCode: 200, headers: nil)
             }
           }
           
@@ -64,28 +64,22 @@ class TegFacebookUserLoaderSpec: QuickSpec {
           
           it("should return an error") {
             let future =  loader.load(askEmail: true)
-            expect(future.error?.nsError.domain).toEventually(equal(TegFacebookUserLoaderErrorDomain))
-            expect(future.error?.nsError.code).toEventually(equal(200))
-          }
-          
-          it("should return an underlying error") {
-            let future =  loader.load(askEmail: true)
-            expect(future.error?.nsError.userInfo.flatMap { $0[NSUnderlyingErrorKey] as? NSError }?.domain).toEventually(equal("test-domain"))
-            expect(future.error?.nsError.userInfo.flatMap { $0[NSUnderlyingErrorKey] as? NSError }?.code).toEventually(equal(101))
+            let underlyingError = NSError(domain: "test-domain", code: 101, userInfo: nil)
+            expect(future.error).toEventually(equal(TegFacebookUserLoaderError.GraphRequest(error: underlyingError)))
           }
         }
       }
       
-      describe("loaderE") {
+      describe("loadE") {
         context("on success") {
           beforeEach {
             loader = TegFacebookUserLoader(loginManager: StubbedSucceesFacebookLoginManager())
             
             OHHTTPStubs.stubRequestsPassingTest({ $0.URL!.host == "graph.facebook.com" }) { _ in
               let meResponse = ["id": "test-user-id"]
-              let data = NSJSONSerialization.dataWithJSONObject(meResponse, options:.PrettyPrinted, error: nil)
+              let data = try! NSJSONSerialization.dataWithJSONObject(meResponse, options:.PrettyPrinted)
               
-              return OHHTTPStubsResponse(data: data!, statusCode: 200, headers: nil)
+              return OHHTTPStubsResponse(data: data, statusCode: 200, headers: nil)
             }
           }
           
@@ -99,7 +93,6 @@ class TegFacebookUserLoaderSpec: QuickSpec {
           }
         }
         
-        
         context("on failure") {
           beforeEach {
             loader = TegFacebookUserLoader(loginManager: StubbedFailFacebookLoginManager())
@@ -107,15 +100,51 @@ class TegFacebookUserLoaderSpec: QuickSpec {
           
           it("should return an error") {
             let future =  loader.loadE(askEmail: true)
-            expect(future.error?.domain).toEventually(equal(TegFacebookUserLoaderErrorDomain))
-            expect(future.error?.code).toEventually(equal(200))
+            expect(future.error?.domain).toEventually(equal("LoadFacebookProfileKit.TegFacebookUserLoaderError"))
+            expect(future.error?.code).toEventually(equal(1))
           }
           
           it("should return an underlying error") {
             let future =  loader.loadE(askEmail: true)
-            expect(future.error?.userInfo.flatMap { $0[NSUnderlyingErrorKey] as? NSError }?.domain).toEventually(equal("test-domain"))
-            expect(future.error?.userInfo.flatMap { $0[NSUnderlyingErrorKey] as? NSError }?.code).toEventually(equal(101))
+            expect((future.error?.userInfo[NSUnderlyingErrorKey] as? NSError)?.domain).toEventually(equal("test-domain"))
+            expect((future.error?.userInfo[NSUnderlyingErrorKey] as? NSError)?.code).toEventually(equal(101))
           }
+        }
+      }
+    }
+    
+    describe("FakeUITestsFacebookUserLoader") {
+      var loader: FacebookUserLoader!
+      
+      beforeEach {
+        loader = FakeUITestsFacebookUserLoader()
+      }
+      
+      describe("load") {
+        it("should return an user") {
+          let future =  loader.load(askEmail: true)
+          expect(future.value?.id).toEventually(equal("fake-user-id"), timeout: 2)
+        }
+      }
+      
+      describe("loadE") {
+        it("should return an user") {
+          let future =  loader.loadE(askEmail: true)
+          expect(future.value?.id).toEventually(equal("fake-user-id"), timeout: 2)
+        }
+      }
+    }
+    
+    describe("FacebookUserLoaderFactory") {
+      var loader: FacebookUserLoader!
+      
+      beforeEach {
+        loader = FacebookUserLoaderFactory.userLoader
+      }
+      
+      context("when not testing UI") {
+        it("should return a TegFacebookUserLoader") {
+          expect(loader is TegFacebookUserLoader).to(beTrue())
         }
       }
     }
