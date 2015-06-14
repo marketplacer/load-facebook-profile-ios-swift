@@ -1,5 +1,5 @@
 github "Quick/Nimble" "v2.0.0-rc.1"
 github "AliSoftware/OHHTTPStubs" "4.0.2"
 github "Quick/Quick" "v0.4.0"
-github "antitypical/Result" "0.5"
-github "sync/BrightFutures" "c35f8a583e5a6d4a63852715578be0870be5bcc0"
+github "sync/Result" "bf531551ab24d4725fd295666af1ee3db8138b67"
+github "sync/BrightFutures" "e0ded8ea339a4423690ed3e40f01b4577c7f9528"
