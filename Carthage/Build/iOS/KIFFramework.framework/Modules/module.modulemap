@@ -1,6 +1,0 @@
-framework module KIFFramework {
-  umbrella header "KIFFramework.h"
-
-  export *
-  module * { export * }
-}

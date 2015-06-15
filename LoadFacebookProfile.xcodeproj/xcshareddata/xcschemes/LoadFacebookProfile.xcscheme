@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0630"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -20,20 +20,6 @@
                ReferencedContainer = "container:LoadFacebookProfile.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2BD0E59E1A8AC1240095C31F"
-               BuildableName = "LoadFacebookProfileTests.xctest"
-               BlueprintName = "LoadFacebookProfileTests"
-               ReferencedContainer = "container:LoadFacebookProfile.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -46,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2BD0E59E1A8AC1240095C31F"
-               BuildableName = "LoadFacebookProfileTests.xctest"
-               BlueprintName = "LoadFacebookProfileTests"
+               BlueprintIdentifier = "455A113A1B291DFE00BF0266"
+               BuildableName = "LoadFacebookProfileUITests.xctest"
+               BlueprintName = "LoadFacebookProfileUITests"
                ReferencedContainer = "container:LoadFacebookProfile.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -62,6 +48,8 @@
             ReferencedContainer = "container:LoadFacebookProfile.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -71,6 +59,7 @@
       buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
       <BuildableProductRunnable
          runnableDebuggingMode = "0">

@@ -1,6 +1,6 @@
 import UIKit
-import LoadFacebookProfileKit
 import BrightFutures
+import LoadFacebookProfileKit
 
 class ViewController: UIViewController {
   @IBOutlet weak var loginLogoutButton: UIButton!
@@ -32,11 +32,11 @@ class ViewController: UIViewController {
     token.invalidate()
     token = InvalidationToken()
     
-    loader.load(askEmail: true)
+    loader.loadE(askEmail: true)
       .onSuccess(token: token) { [weak self] user in
         self?.onUserLoaded(user)
       }.onFailure(token: token) { [weak self] error in
-        self?.userInfoLabel.text = error.nsError.localizedDescription
+        self?.userInfoLabel.text = error.localizedDescription
     }
   }
   
@@ -53,10 +53,10 @@ class ViewController: UIViewController {
     
     fields.append("Access token: \(user.accessToken)")
     
-    let outputText = join("\n\n", fields)
+    let outputText = "\n\n".join(fields)
     
     userInfoLabel.text = outputText
-    println(outputText)
+    print(outputText)
   }
 }
 
