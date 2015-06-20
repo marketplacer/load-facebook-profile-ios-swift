@@ -9,7 +9,7 @@ class TegFacebookUserLoaderErrorSpec: QuickSpec {
       describe("Parsing") {
         context("when Equal") {
           it("should be equal") {
-            expect(TegFacebookUserLoaderError.Parsing) == TegFacebookUserLoaderError.Parsing
+            expect(TegFacebookUserLoaderError.Parsing) != TegFacebookUserLoaderError.Parsing
           }
         }
         
