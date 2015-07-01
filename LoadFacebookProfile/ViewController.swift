@@ -8,17 +8,9 @@ class ViewController: UIViewController {
   
   private let loader: FacebookUserLoader
   
-  var token: InvalidationToken
-  
   required init(coder aDecoder: NSCoder) {
     loader = FacebookUserLoaderFactory.userLoader
-    token = InvalidationToken()
-    
     super.init(coder: aDecoder)
-  }
-  
-  deinit {
-    token.invalidate()
   }
   
   override func viewDidLoad() {
@@ -28,15 +20,9 @@ class ViewController: UIViewController {
   
   @IBAction func onLoginWithFacebookButtonTapped(sender: AnyObject) {
     userInfoLabel.text = ""
-    
-    token.invalidate()
-    token = InvalidationToken()
-    
-    loader.loadE(askEmail: true)
-      .onSuccess(token: token) { [weak self] user in
-        self?.onUserLoaded(user)
-      }.onFailure(token: token) { [weak self] error in
-        self?.userInfoLabel.text = error.localizedDescription
+  
+    loader.load(askEmail: true) { [weak self] user in
+      self?.onUserLoaded(user)
     }
   }
   
