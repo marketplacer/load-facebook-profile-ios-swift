@@ -8,19 +8,24 @@ Load user profile information from Facebook.
 
 */
 public class FacebookUserLoader {
-  private let loginManager: FBSDKLoginManager
+  
+  private var _loginManager: FBSDKLoginManager?
+  
+  private var loginManager: FBSDKLoginManager? {
+    get {
+      if FacebookUserLoader.isSimulated { return nil }
+      
+      if _loginManager == nil {
+        _loginManager = FBSDKLoginManager()
+      }
+      
+      return _loginManager
+    }
+  }
+  
   private var currentConnection: FBSDKGraphRequestConnection?
   
-  /**
-
-  If present, the `load` method will call `onSuccess` function immediatelly with the supplied user without touching Facebook SDK. It can be user in unit tests.
-  
-  */
-  public static var simulateSuccessUser: TegFacebookUser?
-  
-  public init() {
-    loginManager = FBSDKLoginManager()
-  }
+  public init() { }
   
   deinit {
     cancel()
@@ -35,6 +40,12 @@ public class FacebookUserLoader {
   - parameter onSuccess: A function that will be called after user authenticates with Facebook. A user profile information is passed to the function.\
   */
   public func load(askEmail askEmail: Bool, onError:()->(), onSuccess: (TegFacebookUser)->()) {
+    if FacebookUserLoader.isSimulated {
+      FacebookUserLoader.simulateError(onError)
+      FacebookUserLoader.simulateSuccess(onSuccess)
+      return
+    }
+    
     cancel()
     logOut()
     logInAndLoadUserProfile(askEmail, onError: onError, onSuccess: onSuccess)
@@ -54,7 +65,7 @@ public class FacebookUserLoader {
       permissions.append("email")
     }
     
-    loginManager.logInWithReadPermissions(permissions) { [weak self] result, error in
+    loginManager?.logInWithReadPermissions(permissions) { [weak self] result, error in
       if error != nil {
         onError()
         return
@@ -70,7 +81,7 @@ public class FacebookUserLoader {
   }
   
   private func logOut() {
-    loginManager.logOut()
+    loginManager?.logOut()
   }
   
   /// Loads user profile information from Facebook.
@@ -117,5 +128,51 @@ public class FacebookUserLoader {
   
   private var accessToken: String? {
     return FBSDKAccessToken.currentAccessToken().tokenString
+  }
+  
+  // MARK: - Simulation for tests
+  // -------------------------------
+  
+  /**
+  
+  If present, the `load` method will call `onSuccess` function immediatelly with the supplied user without touching Facebook SDK. Used in tests.
+  
+  */
+  public static var simulateSuccessUser: TegFacebookUser?
+  
+  /// Delay used to simulate Facebook response. if 0 response is returned synchronously.
+  public static var simulateLoadAfterDelay = 0.1
+  
+  
+  /// If true the `load` method will call `onError` function immediatelly without touching Facebook SDK. Used in tests.
+  public static var simulateError = false
+  
+  private class func simulateSuccess(onSuccess: (TegFacebookUser)->()) {
+    if let successUser = simulateSuccessUser {
+      runAfterDelay(simulateLoadAfterDelay) { onSuccess(successUser) }
+    }
+  }
+  
+  private class func simulateError(onError: ()->()) {
+    if simulateError {
+      runAfterDelay(simulateLoadAfterDelay) { onError() }
+    }
+  }
+  
+  /// Runs the block after the delay. If delay is 0 the block is called synchronously.
+  private class func runAfterDelay(delaySeconds: Double, block: ()->()) {
+    if delaySeconds == 0 {
+      block()
+    } else {
+      let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delaySeconds * Double(NSEC_PER_SEC)))
+      dispatch_after(time, dispatch_get_main_queue(), block)
+    }
+  }
+  
+  /// Check if we are currently simulating the facebook loading, which is used in unit test.
+  private static var isSimulated: Bool {
+    if simulateSuccessUser != nil { return true }
+    if simulateError { return true }
+    return false
   }
 }

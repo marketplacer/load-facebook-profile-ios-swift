@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2B25A4CB1B436A370009363E /* ParseFacebooUserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A57BEE1B1C00B100EF583C /* ParseFacebooUserTests.swift */; };
+		2B25A4D31B4377BC0009363E /* FakeLoginWithFacebookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B25A4D21B4377BC0009363E /* FakeLoginWithFacebookTests.swift */; };
 		2BD0E5901A8AC1240095C31F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0E58F1A8AC1240095C31F /* AppDelegate.swift */; };
 		2BD0E5921A8AC1240095C31F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0E5911A8AC1240095C31F /* ViewController.swift */; };
 		2BD0E5951A8AC1240095C31F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BD0E5931A8AC1240095C31F /* Main.storyboard */; };
@@ -85,6 +86,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2B25A4D21B4377BC0009363E /* FakeLoginWithFacebookTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeLoginWithFacebookTests.swift; sourceTree = "<group>"; };
 		2BD0E58A1A8AC1240095C31F /* LoadFacebookProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoadFacebookProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BD0E58E1A8AC1240095C31F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BD0E58F1A8AC1240095C31F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				45A57BEE1B1C00B100EF583C /* ParseFacebooUserTests.swift */,
+				2B25A4D21B4377BC0009363E /* FakeLoginWithFacebookTests.swift */,
 				45D73BCA1B16ADA400D3FE08 /* Supporting Files */,
 			);
 			path = LoadFacebookProfileKitTests;
@@ -446,6 +449,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B25A4D31B4377BC0009363E /* FakeLoginWithFacebookTests.swift in Sources */,
 				2B25A4CB1B436A370009363E /* ParseFacebooUserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
