@@ -20,9 +20,12 @@ class ViewController: UIViewController {
   @IBAction func onLoginWithFacebookButtonTapped(sender: AnyObject) {
     userInfoLabel.text = ""
   
-    loader.load(askEmail: true) { [weak self] user in
+    loader.load(askEmail: true, onError: { [weak self] in
+      self?.userInfoLabel.text = "Error occured"
+    },
+    onSuccess: { [weak self] user in
       self?.onUserLoaded(user)
-    }
+    })
   }
   
   private func onUserLoaded(user: TegFacebookUser) {

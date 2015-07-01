@@ -1,6 +1,12 @@
 import Foundation
 import FBSDKLoginKit
 
+
+/**
+
+Load user profile information from Facebook.
+
+*/
 class TegFacebookUserLoader: FacebookUserLoader {
   private let loginManager: FBSDKLoginManager
   private var currentConnection: FBSDKGraphRequestConnection?
@@ -13,10 +19,10 @@ class TegFacebookUserLoader: FacebookUserLoader {
     cancel()
   }
   
-  func load(askEmail askEmail: Bool, onSuccess: (TegFacebookUser)->()) {
+  func load(askEmail askEmail: Bool, onError: ()->(), onSuccess: (TegFacebookUser)->()) {
     cancel()
     logOut()
-    logInAndLoadUserProfile(askEmail, onSuccess: onSuccess)
+    logInAndLoadUserProfile(askEmail, onError: onError, onSuccess: onSuccess)
   }
   
   func cancel() {
@@ -24,7 +30,9 @@ class TegFacebookUserLoader: FacebookUserLoader {
     currentConnection = nil
   }
   
-  private func logInAndLoadUserProfile(askEmail: Bool, onSuccess: (TegFacebookUser)->()) {
+  private func logInAndLoadUserProfile(askEmail: Bool, onError: ()->(),
+    onSuccess: (TegFacebookUser)->()) {
+      
     var permissions = ["public_profile"]
     
     if askEmail {
@@ -32,10 +40,17 @@ class TegFacebookUserLoader: FacebookUserLoader {
     }
     
     loginManager.logInWithReadPermissions(permissions) { [weak self] result, error in
-      if error != nil { return }
-      if result.isCancelled { return }
+      if error != nil {
+        onError()
+        return
+      }
       
-      self?.loadFacebookMeInfo(onSuccess)
+      if result.isCancelled {
+        onError()
+        return
+      }
+      
+      self?.loadFacebookMeInfo(onError, onSuccess: onSuccess)
     }
   }
   
@@ -43,22 +58,34 @@ class TegFacebookUserLoader: FacebookUserLoader {
     loginManager.logOut()
   }
   
-  private func loadFacebookMeInfo(onSuccess: (TegFacebookUser) -> ()) {
-    if FBSDKAccessToken.currentAccessToken() == nil { return }
+  /// Loads user profile information from Facebook.
+  private func loadFacebookMeInfo(onError: ()->(), onSuccess: (TegFacebookUser) -> ()) {
+    if FBSDKAccessToken.currentAccessToken() == nil {
+      onError()
+      return
+    }
     
     let graphRequest = FBSDKGraphRequest(graphPath: "me", parameters: nil)
     
     currentConnection = graphRequest.startWithCompletionHandler { [weak self] connection, result, error in
-      if error != nil { return }
+      if error != nil {
+        onError()
+        return
+      }
       
       if let userData = result as? NSDictionary,
         accessToken = self?.accessToken,
         user = TegFacebookUserLoader.parseMeData(userData, accessToken: accessToken) {
-          onSuccess(user)
+        
+        onSuccess(user)
+      } else {
+        onError()
       }
     }
   }
   
+  
+  /// Parses user profile dictionary returned by Facebook SDK.
   class func parseMeData(data: NSDictionary, accessToken: String) -> TegFacebookUser? {
     if let id = data["id"] as? String {
       return TegFacebookUser(

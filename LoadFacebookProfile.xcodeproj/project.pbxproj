@@ -19,7 +19,7 @@
 		2BD0E5B21A8AC3700095C31F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BD0E5B11A8AC3700095C31F /* Default-568h@2x.png */; };
 		452915DC1B16C43900CDDDE6 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BA75451B158801003095CC /* FBSDKCoreKit.framework */; };
 		452915DD1B16C43900CDDDE6 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BA75461B158801003095CC /* FBSDKLoginKit.framework */; };
-		455A113E1B291DFE00BF0266 /* ViewControllerUITestsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455A113D1B291DFE00BF0266 /* ViewControllerUITestsSpec.swift */; };
+		455A113E1B291DFE00BF0266 /* ViewControllerUITestsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455A113D1B291DFE00BF0266 /* ViewControllerUITestsTests.swift */; };
 		45CBE8E91B1C133900F714DC /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BA75451B158801003095CC /* FBSDKCoreKit.framework */; };
 		45CBE8EA1B1C133900F714DC /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BA75461B158801003095CC /* FBSDKLoginKit.framework */; };
 		45D73BC41B16ADA400D3FE08 /* LoadFacebookProfileKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D73BB91B16ADA400D3FE08 /* LoadFacebookProfileKit.framework */; };
@@ -100,7 +100,7 @@
 		2BD0E5991A8AC1240095C31F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		2BD0E5B11A8AC3700095C31F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		455A113B1B291DFE00BF0266 /* LoadFacebookProfileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoadFacebookProfileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		455A113D1B291DFE00BF0266 /* ViewControllerUITestsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerUITestsSpec.swift; sourceTree = "<group>"; };
+		455A113D1B291DFE00BF0266 /* ViewControllerUITestsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerUITestsTests.swift; sourceTree = "<group>"; };
 		455A113F1B291DFE00BF0266 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45A57BEE1B1C00B100EF583C /* ParseFacebooUserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseFacebooUserTests.swift; sourceTree = "<group>"; };
 		45BA75451B158801003095CC /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
@@ -203,7 +203,7 @@
 		455A113C1B291DFE00BF0266 /* LoadFacebookProfileUITests */ = {
 			isa = PBXGroup;
 			children = (
-				455A113D1B291DFE00BF0266 /* ViewControllerUITestsSpec.swift */,
+				455A113D1B291DFE00BF0266 /* ViewControllerUITestsTests.swift */,
 				455A113F1B291DFE00BF0266 /* Info.plist */,
 			);
 			path = LoadFacebookProfileUITests;
@@ -438,7 +438,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				455A113E1B291DFE00BF0266 /* ViewControllerUITestsSpec.swift in Sources */,
+				455A113E1B291DFE00BF0266 /* ViewControllerUITestsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
