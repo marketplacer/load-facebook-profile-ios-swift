@@ -27,7 +27,7 @@ The helper function can be useful for those who just need to load a Facebook use
 2. Add the following to your Cartfile
 
 ```
-github "exchangegroup/load-facebook-profile-ios-swift"
+github "exchangegroup/load-facebook-profile-ios-swift" ~> 3.0
 ```
 
 ## Usage
