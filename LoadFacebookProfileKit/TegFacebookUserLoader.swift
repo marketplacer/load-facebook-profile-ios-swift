@@ -1,7 +1,5 @@
 import Foundation
 import FBSDKLoginKit
-import BrightFutures
-import Result
 
 class TegFacebookUserLoader: FacebookUserLoader {
   private let loginManager: FBSDKLoginManager

@@ -1,5 +1,4 @@
 import UIKit
-import BrightFutures
 import LoadFacebookProfileKit
 
 class ViewController: UIViewController {
