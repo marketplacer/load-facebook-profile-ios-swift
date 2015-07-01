@@ -35,7 +35,7 @@ github "exchangegroup/load-facebook-profile-ios-swift" ~> 3.0
 ```Swift
 import LoadFacebookProfileKit
 
-let loader = TegFacebookUserLoader()
+let loader = FacebookUserLoader()
 loader.load(askEmail: true,
   onError: { },
   onSuccess: { user in
@@ -56,6 +56,27 @@ In order to authenticate a user one needs to verify its `facebook user id` on se
 https://graph.facebook.com/me?fields=id&access_token=YOUR_ACCCESS_TOKEN
 ```
 
-## Repository home
+## Unit test
 
-https://github.com/exchangegroup/load-facebook-profile-ios-swift
+Sometimes it is useful to bypass the Facebook login in Facebook. Here is how to setup fake Facebook responses that will be used when calling `load` method of `FacebookUserLoader` object.
+
+```Swift
+// Call `onSuccess` with the supplied user without touching Facebook SDK.
+FacebookUserLoader.simulateSuccessUser = FacebookUserLoader.simulateSuccessUser = TegFacebookUser(id: "fake user id",
+  accessToken: "test access tokeb",
+  email: "test@email.com",
+  firstName: "test first name",
+  lastName: "test last name",
+  name: "test name"
+)
+```
+
+```Swift
+// Delay used to simulate Facebook response. If 0 response is returned synchronously.
+FacebookUserLoader.simulateLoadAfterDelay = 0.1
+```
+
+```Swift
+// Call `onError` function without touching Facebook SDK.
+FacebookUserLoader.simulateError = false
+```

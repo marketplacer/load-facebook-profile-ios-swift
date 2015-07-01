@@ -135,17 +135,17 @@ public class FacebookUserLoader {
   
   /**
   
-  If present, the `load` method will call `onSuccess` function immediatelly with the supplied user without touching Facebook SDK. Used in tests.
+  If present, the `load` method will call `onSuccess` function with the supplied user without touching Facebook SDK. Used in tests.
   
   */
   public static var simulateSuccessUser: TegFacebookUser?
   
-  /// Delay used to simulate Facebook response. if 0 response is returned synchronously.
+  /// If true the `load` method will call `onError` function without touching Facebook SDK. Used in tests.
+  public static var simulateError = false
+  
+  /// Delay used to simulate Facebook response. If 0 response is returned synchronously.
   public static var simulateLoadAfterDelay = 0.1
   
-  
-  /// If true the `load` method will call `onError` function immediatelly without touching Facebook SDK. Used in tests.
-  public static var simulateError = false
   
   private class func simulateSuccess(onSuccess: (TegFacebookUser)->()) {
     if let successUser = simulateSuccessUser {
