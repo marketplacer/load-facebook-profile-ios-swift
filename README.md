@@ -60,7 +60,7 @@ In order to authenticate a user one needs to verify its `facebook user id` on se
 https://graph.facebook.com/me?fields=id&access_token=YOUR_ACCCESS_TOKEN
 ```
 
-## Unit test
+## Unit tests
 
 Sometimes it is useful to bypass the Facebook login in Facebook. Here is how to setup fake Facebook responses that will be used when calling `load` method of `FacebookUserLoader` object.
 
