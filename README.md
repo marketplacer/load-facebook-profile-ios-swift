@@ -82,5 +82,5 @@ FacebookUserLoader.simulateLoadAfterDelay = 0.1
 
 ```Swift
 // Call `onError` function without touching Facebook SDK.
-FacebookUserLoader.simulateError = false
+FacebookUserLoader.simulateError = true
 ```
