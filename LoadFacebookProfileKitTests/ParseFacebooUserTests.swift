@@ -18,7 +18,7 @@ class FacebookUserParserTests: XCTestCase {
       "name": "test-name"
     ]
     
-    let result = TegFacebookUserLoader.parseMeData(dictionary, accessToken: "test-access-token")!
+    let result = FacebookUserLoader.parseMeData(dictionary, accessToken: "test-access-token")!
     XCTAssertEqual("test-id", result.id)
     XCTAssertEqual("test-access-token", result.accessToken)
     XCTAssertEqual("test-email", result.email!)
@@ -32,7 +32,7 @@ class FacebookUserParserTests: XCTestCase {
       "id": "test-id"
     ]
     
-    let result = TegFacebookUserLoader.parseMeData(dictionary, accessToken: "test-access-token")!
+    let result = FacebookUserLoader.parseMeData(dictionary, accessToken: "test-access-token")!
     XCTAssertEqual("test-id", result.id)
     XCTAssertEqual("test-access-token", result.accessToken)
     XCTAssert(result.email == nil)
@@ -49,7 +49,7 @@ class FacebookUserParserTests: XCTestCase {
       "name": "test-name"
     ]
     
-    let result = TegFacebookUserLoader.parseMeData(dictionary, accessToken: "test-access-token")
+    let result = FacebookUserLoader.parseMeData(dictionary, accessToken: "test-access-token")
     XCTAssert(result == nil)
   }
 }

@@ -5,15 +5,17 @@ class ViewController: UIViewController {
   @IBOutlet weak var loginLogoutButton: UIButton!
   @IBOutlet weak var userInfoLabel: UILabel!
   
-  private let loader: FacebookUserLoader
+  private let loader = FacebookUserLoader()
   
   required init(coder aDecoder: NSCoder) {
-    loader = FacebookUserLoaderFactory.userLoader
     super.init(coder: aDecoder)
   }
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    stubUserForUITests()
+    
     userInfoLabel.text = ""
   }
   
@@ -45,6 +47,23 @@ class ViewController: UIViewController {
     
     userInfoLabel.text = outputText
     print(outputText)
+  }
+  
+  private func stubUserForUITests() {
+    if ViewController.isUITesting() {
+      FacebookUserLoader.simulateSuccessUser = TegFacebookUser(id: "fake-user-id",
+        accessToken: "fake-access-token",
+        email: nil,
+        firstName: nil,
+        lastName: nil,
+        name: nil)
+    }
+  }
+  
+  private class func isUITesting() -> Bool {
+    let environment = NSProcessInfo.processInfo().environment
+    let runningUITests =  environment["RUNNING_UI_TESTS"]
+    return runningUITests == "YES"
   }
 }
 

@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2B25A4CB1B436A370009363E /* ParseFacebooUserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A57BEE1B1C00B100EF583C /* ParseFacebooUserTests.swift */; };
-		2B25A4CD1B436D560009363E /* FacebookUserLoaderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B25A4CC1B436D560009363E /* FacebookUserLoaderFactory.swift */; };
-		2B25A4CF1B436DBB0009363E /* FacebookUserLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B25A4CE1B436DBB0009363E /* FacebookUserLoader.swift */; };
-		2B25A4D11B436DE10009363E /* FakeUITestsFacebookUserLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B25A4D01B436DE10009363E /* FakeUITestsFacebookUserLoader.swift */; };
 		2BD0E5901A8AC1240095C31F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0E58F1A8AC1240095C31F /* AppDelegate.swift */; };
 		2BD0E5921A8AC1240095C31F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0E5911A8AC1240095C31F /* ViewController.swift */; };
 		2BD0E5951A8AC1240095C31F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BD0E5931A8AC1240095C31F /* Main.storyboard */; };
@@ -26,7 +23,7 @@
 		45D73BD01B16ADA400D3FE08 /* LoadFacebookProfileKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D73BB91B16ADA400D3FE08 /* LoadFacebookProfileKit.framework */; };
 		45D73BD11B16ADA400D3FE08 /* LoadFacebookProfileKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 45D73BB91B16ADA400D3FE08 /* LoadFacebookProfileKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		45D73BDB1B16ADFF00D3FE08 /* TegFacebookUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D73BD81B16ADFF00D3FE08 /* TegFacebookUser.swift */; };
-		45D73BDC1B16ADFF00D3FE08 /* TegFacebookUserLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D73BD91B16ADFF00D3FE08 /* TegFacebookUserLoader.swift */; };
+		45D73BDC1B16ADFF00D3FE08 /* FacebookUserLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D73BD91B16ADFF00D3FE08 /* FacebookUserLoader.swift */; };
 		45D73BE11B16AE3C00D3FE08 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BA75451B158801003095CC /* FBSDKCoreKit.framework */; };
 		45D73BE21B16AE3C00D3FE08 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BA75461B158801003095CC /* FBSDKLoginKit.framework */; };
 /* End PBXBuildFile section */
@@ -88,9 +85,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2B25A4CC1B436D560009363E /* FacebookUserLoaderFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookUserLoaderFactory.swift; sourceTree = "<group>"; };
-		2B25A4CE1B436DBB0009363E /* FacebookUserLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookUserLoader.swift; sourceTree = "<group>"; };
-		2B25A4D01B436DE10009363E /* FakeUITestsFacebookUserLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeUITestsFacebookUserLoader.swift; sourceTree = "<group>"; };
 		2BD0E58A1A8AC1240095C31F /* LoadFacebookProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoadFacebookProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BD0E58E1A8AC1240095C31F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BD0E58F1A8AC1240095C31F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -110,7 +104,7 @@
 		45D73BC31B16ADA400D3FE08 /* LoadFacebookProfileKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoadFacebookProfileKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		45D73BCB1B16ADA400D3FE08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45D73BD81B16ADFF00D3FE08 /* TegFacebookUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TegFacebookUser.swift; sourceTree = "<group>"; };
-		45D73BD91B16ADFF00D3FE08 /* TegFacebookUserLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TegFacebookUserLoader.swift; sourceTree = "<group>"; };
+		45D73BD91B16ADFF00D3FE08 /* FacebookUserLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookUserLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,11 +215,8 @@
 		45D73BBA1B16ADA400D3FE08 /* LoadFacebookProfileKit */ = {
 			isa = PBXGroup;
 			children = (
-				2B25A4CE1B436DBB0009363E /* FacebookUserLoader.swift */,
-				2B25A4CC1B436D560009363E /* FacebookUserLoaderFactory.swift */,
-				2B25A4D01B436DE10009363E /* FakeUITestsFacebookUserLoader.swift */,
 				45D73BD81B16ADFF00D3FE08 /* TegFacebookUser.swift */,
-				45D73BD91B16ADFF00D3FE08 /* TegFacebookUserLoader.swift */,
+				45D73BD91B16ADFF00D3FE08 /* FacebookUserLoader.swift */,
 				45D73BBB1B16ADA400D3FE08 /* Supporting Files */,
 			);
 			path = LoadFacebookProfileKit;
@@ -446,11 +437,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45D73BDC1B16ADFF00D3FE08 /* TegFacebookUserLoader.swift in Sources */,
-				2B25A4CD1B436D560009363E /* FacebookUserLoaderFactory.swift in Sources */,
-				2B25A4D11B436DE10009363E /* FakeUITestsFacebookUserLoader.swift in Sources */,
+				45D73BDC1B16ADFF00D3FE08 /* FacebookUserLoader.swift in Sources */,
 				45D73BDB1B16ADFF00D3FE08 /* TegFacebookUser.swift in Sources */,
-				2B25A4CF1B436DBB0009363E /* FacebookUserLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,7 +578,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = LoadFacebookProfile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -608,7 +595,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = LoadFacebookProfile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -623,7 +609,6 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -643,7 +628,6 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -667,7 +651,6 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -698,7 +681,6 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -719,7 +701,6 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -741,7 +722,6 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				GCC_NO_COMMON_BLOCKS = YES;
