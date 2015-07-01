@@ -3,30 +3,6 @@ import FBSDKLoginKit
 import BrightFutures
 import Result
 
-// MARK: - Factory
-
-public protocol FacebookUserLoader: class {
-  func load(askEmail askEmail: Bool, onSuccess: (TegFacebookUser)->())
-}
-
-public class FacebookUserLoaderFactory {
-  public class var userLoader: FacebookUserLoader {
-    if isUITesting() {
-      return FakeUITestsFacebookUserLoader()
-    } else {
-      return TegFacebookUserLoader()
-    }
-  }
-  
-  private class func isUITesting() -> Bool {
-    let environment = NSProcessInfo.processInfo().environment
-    let runningUITests =  environment["RUNNING_UI_TESTS"]
-    return runningUITests == "YES"
-  }
-}
-
-// MARK: - TegFacebookUserLoader
-
 class TegFacebookUserLoader: FacebookUserLoader {
   private let loginManager: FBSDKLoginManager
   private var currentConnection: FBSDKGraphRequestConnection?
@@ -101,17 +77,5 @@ class TegFacebookUserLoader: FacebookUserLoader {
   
   private var accessToken: String? {
     return FBSDKAccessToken.currentAccessToken().tokenString
-  }
-}
-
-
-// MARK: - UI Tests
-
-class FakeUITestsFacebookUserLoader: FacebookUserLoader {
-  func load(askEmail askEmail: Bool, onSuccess: (TegFacebookUser)->()) {
-    let fakeUser = TegFacebookUser(id: "fake-user-id",
-      accessToken: "fake-access-token", email: nil, firstName: nil, lastName: nil, name: nil)
-    
-    onSuccess(fakeUser)
   }
 }
