@@ -39,7 +39,10 @@ github "exchangegroup/load-facebook-profile-ios-swift" ~> 3.0
 ```Swift
 import LoadFacebookProfileKit
 
-let loader = FacebookUserLoader()
+let loader = FacebookUserLoader() // Keep strong reference
+
+...
+
 loader.load(askEmail: true,
   onError: { },
   onSuccess: { user in
@@ -67,7 +70,7 @@ Sometimes it is useful to bypass the Facebook login in Facebook. Here is how to 
 ```Swift
 // Call `onSuccess` with the supplied user without touching Facebook SDK.
 FacebookUserLoader.simulateSuccessUser = FacebookUserLoader.simulateSuccessUser = TegFacebookUser(id: "fake user id",
-  accessToken: "test access tokeb",
+  accessToken: "test access token",
   email: "test@email.com",
   firstName: "test first name",
   lastName: "test last name",
