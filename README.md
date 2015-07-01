@@ -24,7 +24,11 @@ The helper function can be useful for those who just need to load a Facebook use
 ## Setup in your app
 
 1. Add Facebook SDK to your app. Follow instructions on Facebook developer pages. See [Facebook iOS SDK](https://developers.facebook.com/docs/ios/getting-started)
-2. Add the following to your Cartfile
+2. Add [FacebookUserLoader.swift](https://github.com/exchangegroup/load-facebook-profile-ios-swift/blob/master/LoadFacebookProfileKit/FacebookUserLoader.swift) and [TegFacebookUser.swift](https://github.com/exchangegroup/load-facebook-profile-ios-swift/blob/master/LoadFacebookProfileKit/TegFacebookUser.swift) to your project.
+
+#### Setup with Carthage
+
+Alternatively, if you are using Carthage, you can add the following to your Cartfile and run `carthage update`
 
 ```
 github "exchangegroup/load-facebook-profile-ios-swift" ~> 3.0

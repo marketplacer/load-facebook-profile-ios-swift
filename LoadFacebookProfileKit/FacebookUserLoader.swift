@@ -1,7 +1,6 @@
 import Foundation
 import FBSDKLoginKit
 
-
 /**
 
 Load user profile information from Facebook.
