@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B25A4CB1B436A370009363E /* ParseFacebooUserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A57BEE1B1C00B100EF583C /* ParseFacebooUserTests.swift */; };
 		2BD0E5901A8AC1240095C31F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0E58F1A8AC1240095C31F /* AppDelegate.swift */; };
 		2BD0E5921A8AC1240095C31F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0E5911A8AC1240095C31F /* ViewController.swift */; };
 		2BD0E5951A8AC1240095C31F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BD0E5931A8AC1240095C31F /* Main.storyboard */; };
@@ -32,8 +33,6 @@
 		459A8F9B1B1BDC310083F556 /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 45D73BA51B16A49600D3FE08 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		459A8F9C1B1BDC310083F556 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 459A8F781B1BDB550083F556 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		459A8F9D1B1BDC310083F556 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 459A8F761B1BDB550083F556 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		459A8FA21B1BEE3D0083F556 /* TegFacebookUserLoaderErrorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459A8FA11B1BEE3D0083F556 /* TegFacebookUserLoaderErrorSpec.swift */; };
-		45CBE8E81B1C127400F714DC /* FBSDKGraphRequestTegExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CBE8E71B1C127400F714DC /* FBSDKGraphRequestTegExtensionsSpec.swift */; };
 		45CBE8E91B1C133900F714DC /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BA75451B158801003095CC /* FBSDKCoreKit.framework */; };
 		45CBE8EA1B1C133900F714DC /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BA75461B158801003095CC /* FBSDKLoginKit.framework */; };
 		45D73BAB1B16A4F000D3FE08 /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D73BA41B16A49600D3FE08 /* BrightFutures.framework */; };
@@ -51,8 +50,6 @@
 		45D73BE21B16AE3C00D3FE08 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BA75461B158801003095CC /* FBSDKLoginKit.framework */; };
 		45E0CA941B1EC85400B3A056 /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45E0CA931B1EC84C00B3A056 /* OHHTTPStubs.framework */; };
 		45E0CA951B1EC85900B3A056 /* OHHTTPStubs.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 45E0CA931B1EC84C00B3A056 /* OHHTTPStubs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		45F0F19C1B1C04670076BBFE /* TegFacebookUserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A57BEE1B1C00B100EF583C /* TegFacebookUserSpec.swift */; };
-		45F170401B1C316200020BC5 /* TegFacebookUserLoaderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F1703F1B1C316200020BC5 /* TegFacebookUserLoaderSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,7 +136,7 @@
 		459A8F761B1BDB550083F556 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = SOURCE_ROOT; };
 		459A8F781B1BDB550083F556 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = SOURCE_ROOT; };
 		459A8FA11B1BEE3D0083F556 /* TegFacebookUserLoaderErrorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TegFacebookUserLoaderErrorSpec.swift; sourceTree = "<group>"; };
-		45A57BEE1B1C00B100EF583C /* TegFacebookUserSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TegFacebookUserSpec.swift; sourceTree = "<group>"; };
+		45A57BEE1B1C00B100EF583C /* ParseFacebooUserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseFacebooUserTests.swift; sourceTree = "<group>"; };
 		45BA75451B158801003095CC /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		45BA75461B158801003095CC /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		45CBE8E71B1C127400F714DC /* FBSDKGraphRequestTegExtensionsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBSDKGraphRequestTegExtensionsSpec.swift; sourceTree = "<group>"; };
@@ -302,7 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				459A8FA11B1BEE3D0083F556 /* TegFacebookUserLoaderErrorSpec.swift */,
-				45A57BEE1B1C00B100EF583C /* TegFacebookUserSpec.swift */,
+				45A57BEE1B1C00B100EF583C /* ParseFacebooUserTests.swift */,
 				45CBE8E71B1C127400F714DC /* FBSDKGraphRequestTegExtensionsSpec.swift */,
 				45F1703F1B1C316200020BC5 /* TegFacebookUserLoaderSpec.swift */,
 				45D73BCA1B16ADA400D3FE08 /* Supporting Files */,
@@ -517,10 +514,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45F0F19C1B1C04670076BBFE /* TegFacebookUserSpec.swift in Sources */,
-				45F170401B1C316200020BC5 /* TegFacebookUserLoaderSpec.swift in Sources */,
-				459A8FA21B1BEE3D0083F556 /* TegFacebookUserLoaderErrorSpec.swift in Sources */,
-				45CBE8E81B1C127400F714DC /* FBSDKGraphRequestTegExtensionsSpec.swift in Sources */,
+				2B25A4CB1B436A370009363E /* ParseFacebooUserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

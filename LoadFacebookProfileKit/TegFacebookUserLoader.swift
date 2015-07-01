@@ -78,22 +78,22 @@ class TegFacebookUserLoader: FacebookUserLoader {
       if error != nil { return }
       
       if let userData = result as? NSDictionary,
-        let user = self?.parseMeData(userData) {
+        accessToken = self?.accessToken,
+        user = TegFacebookUserLoader.parseMeData(userData, accessToken: accessToken) {
           onSuccess(user)
       }
     }
   }
   
-  private func parseMeData(data: NSDictionary) -> TegFacebookUser? {
-    if let id = data["id"] as? String,
-      let accessToken = accessToken {
-        return TegFacebookUser(
-          id: id,
-          accessToken: accessToken,
-          email: data["email"] as? String,
-          firstName: data["first_name"] as? String,
-          lastName: data["last_name"] as? String,
-          name: data["name"] as? String)
+  class func parseMeData(data: NSDictionary, accessToken: String) -> TegFacebookUser? {
+    if let id = data["id"] as? String {
+      return TegFacebookUser(
+        id: id,
+        accessToken: accessToken,
+        email: data["email"] as? String,
+        firstName: data["first_name"] as? String,
+        lastName: data["last_name"] as? String,
+        name: data["name"] as? String)
     }
     
     return nil
