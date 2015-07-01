@@ -10,7 +10,7 @@ This is a demo app and a helper function for loading Facebook user profile:
 * Name
 
 Facebook user ID and access token can be used to authenticate Facebook user in your app.
-The helper function can be useful for those who just need to load a Facebook user profile from code without using other SDK features. 
+The helper function can be useful for those who just need to load a Facebook user profile from code without using other SDK features.
 
 <img src="https://github.com/exchangegroup/load-facebook-profile-ios-swift/raw/master/graphics/load_facebook_profile_ios_swift.png" alt="Load Facebook user profile on iOS swift with Facebook SDK" width="320">
 
@@ -30,21 +30,18 @@ The helper function can be useful for those who just need to load a Facebook use
 github "exchangegroup/load-facebook-profile-ios-swift"
 ```
 
-3. If your are new to Carthage. See [Carthage instructions](https://github.com/Carthage/Carthage/blob/master/README.md)
-
 ## Usage
 
-```swift
+```Swift
 import LoadFacebookProfileKit
-import BrightFutures
 
 let loader = TegFacebookUserLoader()
-loader.load(askEmail: true)
-      .onSuccess(token: token) { user in
-         // user profile is loaded
-      }.onFailure(token: token) {error in
-        // error
-    }
+loader.load(askEmail: true,
+  onError: { },
+  onSuccess: { user in
+    // User has logged in with Facebook
+  }
+)
 ```
 
 ## Profile fields can be empty
