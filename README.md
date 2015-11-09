@@ -12,26 +12,26 @@ This is a demo app and a helper function for loading Facebook user profile:
 Facebook user ID and access token can be used to authenticate Facebook user in your app.
 The helper function can be useful for those who just need to load a Facebook user profile from code without using other SDK features.
 
-<img src="https://github.com/exchangegroup/load-facebook-profile-ios-swift/raw/master/graphics/load_facebook_profile_ios_swift.png" alt="Load Facebook user profile on iOS swift with Facebook SDK" width="320">
+<img src="https://github.com/marketplacer/load-facebook-profile-ios-swift/raw/master/graphics/load_facebook_profile_ios_swift.png" alt="Load Facebook user profile on iOS swift with Facebook SDK" width="320">
 
 ## To run this demo app
 
 1. Open `Info.plist` file.
 2. Update "Bundle identifier", "URL types", "FacebookAppID" and "FacebookDisplayName" with your facebook app information. See [Facebook iOS SDK](https://developers.facebook.com/docs/ios/getting-started) for more details.
 
-<img src='https://raw.githubusercontent.com/exchangegroup/load-facebook-profile-ios-swift/master/graphics/facebook_demo_update_info_plist.png' width='616' alt='change plist'>
+<img src='https://raw.githubusercontent.com/marketplacer/load-facebook-profile-ios-swift/master/graphics/facebook_demo_update_info_plist.png' width='616' alt='change plist'>
 
 ## Setup in your app
 
 1. Add Facebook SDK to your app. Follow instructions on Facebook developer pages. See [Facebook iOS SDK](https://developers.facebook.com/docs/ios/getting-started)
-2. Add [FacebookUserLoader.swift](https://github.com/exchangegroup/load-facebook-profile-ios-swift/blob/master/LoadFacebookProfileKit/FacebookUserLoader.swift) and [TegFacebookUser.swift](https://github.com/exchangegroup/load-facebook-profile-ios-swift/blob/master/LoadFacebookProfileKit/TegFacebookUser.swift) to your project.
+2. Add [FacebookUserLoader.swift](https://github.com/marketplacer/load-facebook-profile-ios-swift/blob/master/LoadFacebookProfileKit/FacebookUserLoader.swift) and [TegFacebookUser.swift](https://github.com/marketplacer/load-facebook-profile-ios-swift/blob/master/LoadFacebookProfileKit/TegFacebookUser.swift) to your project.
 
 #### Setup with Carthage
 
 Alternatively, if you are using Carthage, you can add the following to your Cartfile and run `carthage update`
 
 ```
-github "exchangegroup/load-facebook-profile-ios-swift" ~> 3.0
+github "marketplacer/load-facebook-profile-ios-swift" ~> 3.0
 ```
 
 ## Usage
